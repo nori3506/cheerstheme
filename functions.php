@@ -13,6 +13,7 @@ if ( ! function_exists( 'cheerstheme_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'cheerstheme' ),
+				'menu-social'   =>  'Social Menu',
 			)
 		);
 
