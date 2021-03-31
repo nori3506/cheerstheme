@@ -1,14 +1,9 @@
 <?php ?>
 <article <?php post_class(); ?>>
   <div class="upper-position">
-    <div class="team__member-name">
-      <?php the_field('name'); ?>
-    </div>
+    
+    <div class="arrow"><?php the_field('name'); ?></div>
   </div>
-  <div class="left-top"></div>
-  <div class="right-top"></div>
-  <div class="left-bottom"></div>
-  <div class="right-bottom"></div>
   <div class="team__member-profile-image">
     <?php 
       $image = get_field('profile_image');
