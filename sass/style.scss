@@ -23,10 +23,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 
-@import 'base/settings';
+/* 1 Base ================================= */
 
-/* 1 Base =================== */
-/* 1.1. Normalize =========== */
+/* 1.1. Settings ============ */
+@import 'base/settings';
+/* 1.2. Normalize =========== */
 @import 'base/normalize';
-/* 1.2. Base ================ */
+/* 1.3. Base ================ */
 @import 'base/base';
+
+/* 2 Components =========================== */
+
+/* 2.1. Team ============ */
+@import 'components/team';
