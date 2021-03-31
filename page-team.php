@@ -9,7 +9,14 @@
 
 	<main id="team" class="team">
     <h2 class="team__title">Our team</h2>
-    <?php 
+    <div class="team__center-image">
+      <?php
+        $page_id = 28;
+        $post = get_post( $page_id );
+        echo apply_filters('the_content', $post->post_content);
+      ?>
+    </div>
+    <?php
       $args = array(
         'post_type'      => 'team_member',
         'posts_per_page' => '5',
@@ -17,7 +24,6 @@
       );
 
       $my_query = new WP_Query( $args );
-
       if( $my_query -> have_posts()):
         while( $my_query -> have_posts()):
           $my_query->the_post();

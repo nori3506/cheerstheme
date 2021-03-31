@@ -456,9 +456,34 @@ img {
 }
 .team__member-profile-image img {
   border-radius: 50%;
-  height: 200px;
+  height: 120px;
   border-radius: 50%;
-  width: 200px;
+  width: 120px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.team article:nth-of-type(1) img {
+  position: absolute;
+  top: 35rem;
+  right: 18rem;
+}
+.team article:nth-of-type(2) img {
+  position: absolute;
+  top: 45rem;
+  right: 8rem;
+}
+.team article:nth-of-type(3) img {
+  position: absolute;
+  top: 65rem;
+  right: 12rem;
+}
+.team article:nth-of-type(4) img {
+  position: absolute;
+  top: 30rem;
+  left: 18rem;
+}
+.team article:nth-of-type(5) img {
+  position: absolute;
+  top: 45rem;
+  left: 10rem;
 }/*# sourceMappingURL=style.css.map */
