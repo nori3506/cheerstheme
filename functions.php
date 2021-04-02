@@ -141,6 +141,12 @@ add_action( 'widgets_init', 'cheerstheme_widgets_init' );
  */
 function cheerstheme_scripts() {
 	wp_enqueue_style( 'cheerstheme-style', get_stylesheet_uri(), array(), _S_VERSION );
+  wp_enqueue_style(
+    'eatery_shinya_google_fonts',
+    'https://fonts.googleapis.com/css2?family=Asul:wght@400;700',
+    array(),
+    null
+  );
 	wp_style_add_data( 'cheerstheme-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'cheerstheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );

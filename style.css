@@ -401,12 +401,13 @@ textarea {
 
 .site .nf-field-label label {
   font-family: "Asul", serif;
+  font-size: 1.875rem;
   font-weight: 400;
 }
 
 .nf-form-title h3 {
-  font-weight: 400;
   font-size: 2.5rem;
+  font-weight: 400;
 }
 
 h1,
@@ -570,6 +571,7 @@ input[type='submit'],
   border-radius: 5px;
   background: #de9e48;
   color: #372c2e;
+  font-size: 1.25rem;
   line-height: 1;
   padding: 0.6em 1em 0.4em;
 }
@@ -792,15 +794,21 @@ textarea {
 /* Contact page
 --------------------------------------------- */
 .page-contact .site-main .page {
+  padding: 1rem;
   text-align: center;
+}
+
+.page-contact .site-main .page .entry-title {
+  display: none;
 }
 
 .page-contact .site-main .page .nf-before-form-content {
   display: none;
 }
 
-.page-contact .site-main .page .entry-title {
-  display: none;
+.page-contact .site-main .page .nf-form-content {
+  max-width: 800px;
+  padding: 0;
 }
 
 /* Comments

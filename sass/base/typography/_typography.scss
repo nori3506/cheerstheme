@@ -12,12 +12,13 @@ textarea {
 
 .site .nf-field-label label {
   font-family: $font__heading;
+  font-size: 1.875rem;
   font-weight: 400;
 }
 
 .nf-form-title h3 {
-  font-weight: 400;
   font-size: 2.5rem;
+  font-weight: 400;
 }
 
 @import 'headings';
