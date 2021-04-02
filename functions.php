@@ -178,3 +178,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Add page slug to body class
+function pine_add_page_slug_body_class( $classes ) {
+    global $post;
+    
+    if ( isset( $post ) ) {
+        $classes[] = 'page-' . $post->post_name;
+    }
+    return $classes;
+}
+
+add_filter( 'body_class', 'pine_add_page_slug_body_class' );
