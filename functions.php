@@ -151,6 +151,8 @@ function cheerstheme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'cheerstheme_scripts' );
 
+
+
 /**
  * Implement the Custom Header feature.
  */
