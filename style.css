@@ -370,13 +370,26 @@ template {
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Roboto", helvetica, arial, sans-serif;
-  background: url("./assets/images/cheers-bg-8.png") center center no-repeat;
-  background-color: #372c2e;
-  background-attachment: fixed;
-  background-size: cover;
-  color: white;
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  background-color: #3f3230;
+  color: #fdf9df;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Asul", serif;
 }
 
 ul {
@@ -438,19 +451,128 @@ img {
 }
 
 .alert-danger {
-  color: #F04444;
+  color: #f04444;
   text-align: center;
   font-weight: 700;
 }
 
 .alert-success {
-  color: #50B861;
+  color: #50b861;
   text-align: center;
   font-weight: 700;
 }
 
-/* 2 Components =========================== */
-/* 2.1. Team ============ */
+/* 2 Elements =========================== */
+/* 2.1. Buttons ================ */
+button,
+input[type=button],
+input[type=reset],
+input[type=submit],
+.site .nf-form-content button,
+.site .nf-form-content input[type=button],
+.site .nf-form-content input[type=submit] {
+  width: 280px;
+  height: 50px;
+  border: 2px solid;
+  border-color: #fff;
+  border-radius: 5px;
+  background-color: #de9e48;
+  color: #372c2e;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.6em 1em 0.4em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover,
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover,
+.site .nf-form-content button:hover,
+.site .nf-form-content input[type=button]:hover,
+.site .nf-form-content input[type=submit]:hover {
+  border-color: #e6e6e6;
+  background-color: #ce8625;
+  color: #1b1516;
+}
+button:active, button:focus,
+input[type=button]:active,
+input[type=button]:focus,
+input[type=reset]:active,
+input[type=reset]:focus,
+input[type=submit]:active,
+input[type=submit]:focus,
+.site .nf-form-content button:active,
+.site .nf-form-content button:focus,
+.site .nf-form-content input[type=button]:active,
+.site .nf-form-content input[type=button]:focus,
+.site .nf-form-content input[type=submit]:active,
+.site .nf-form-content input[type=submit]:focus {
+  border-color: #fff;
+}
+
+/* 2.2. Fields ================ */
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+input[type=search],
+input[type=number],
+input[type=tel],
+input[type=range],
+input[type=date],
+input[type=month],
+input[type=week],
+input[type=time],
+input[type=datetime],
+input[type=datetime-local],
+input[type=color],
+textarea,
+.site .nf-form-content .list-select-wrap .nf-field-element > div,
+.site .nf-form-content input:not([type=button]),
+.site .nf-form-content textarea {
+  background: #201d1d;
+  color: #fdf9df;
+  border: 1px solid #de9e48;
+  border-radius: 5px;
+  padding: 0.5rem;
+  transition: none;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=number]:focus,
+input[type=tel]:focus,
+input[type=range]:focus,
+input[type=date]:focus,
+input[type=month]:focus,
+input[type=week]:focus,
+input[type=time]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=color]:focus,
+textarea:focus,
+.site .nf-form-content .list-select-wrap .nf-field-element > div:focus,
+.site .nf-form-content input:not([type=button]):focus,
+.site .nf-form-content textarea:focus {
+  border: 2px solid #de9e48;
+  background-color: #201d1d;
+  color: #fdf9df;
+  transition: none;
+}
+
+select {
+  border: 1px solid #de9e48;
+}
+
+textarea {
+  width: 100%;
+}
+
+/* 3 Components =========================== */
+/* 3.1. Team ================ */
 .team {
   flex-flow: row wrap;
   display: flex;
@@ -596,4 +718,46 @@ img {
 .team article:nth-of-type(5) {
   grid-column: 3/4;
   grid-row: 4/5;
+}
+
+/* 3.2. Contact Page ================ */
+.page-contact .site-main .page {
+  padding: 0 1rem;
+  text-align: center;
+}
+.page-contact .site-main .page .entry-title {
+  display: none;
+}
+.page-contact .site-main .page .nf-before-form-content {
+  display: none;
+}
+.page-contact .site-main .page .nf-form-content {
+  max-width: 800px;
+  padding: 0;
+}
+.page-contact .site-main .page .nf-form-content .label-above .nf-field-label,
+.page-contact .site-main .page .nf-form-content .label-below .nf-field-label,
+.page-contact .site-main .page .nf-form-content .label-hidden .nf-field-label {
+  margin-bottom: 0.5rem;
+}
+.page-contact .site-main .page .nf-error-msg,
+.page-contact .site-main .page .ninja-forms-req-symbol {
+  color: #fdf9df;
+}
+.page-contact .site-main .page #ninja_forms_required_items,
+.page-contact .site-main .page .nf-field-container {
+  margin-bottom: 2.25rem;
+}
+.page-contact .site-main .page #nf-field-3-container {
+  margin-bottom: 7rem;
+}
+.page-contact .site-main .page .nf-field-label label {
+  font-family: "Asul", serif;
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+.page-contact .site-main .page .nf-form-title h3 {
+  margin: 10rem 0 3rem;
+  font-size: 2.5rem;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */
