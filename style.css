@@ -603,6 +603,9 @@ textarea {
   line-height: 1.7rem;
 }
 .team__title {
+  font-weight: 100;
+  font-size: 3rem;
+  font-family: "Asul", serif;
   width: 100%;
   grid-column: 1/-1;
   text-align: center;
