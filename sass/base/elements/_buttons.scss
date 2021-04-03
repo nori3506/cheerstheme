@@ -10,14 +10,18 @@ input[type='submit'],
   border: 2px solid;
   border-color: $color__border-button;
   border-radius: 5px;
-  background: $color__background-button;
+  background-color: $color__background-button;
   color: $color__button;
   font-size: 1.25rem;
   line-height: 1;
   padding: 0.6em 1em 0.4em;
+  cursor: pointer;
+  transition: background-color 0.3s;
 
   &:hover {
     border-color: $color__border-button-hover;
+    background-color: $color__background-button-hover;
+    color: $color__button-hover;
   }
 
   &:active,

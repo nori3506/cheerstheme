@@ -406,6 +406,7 @@ textarea {
 }
 
 .nf-form-title h3 {
+  margin: 10rem 0 3rem;
   font-size: 2.5rem;
   font-weight: 400;
 }
@@ -567,13 +568,16 @@ input[type='submit'],
   width: 280px;
   height: 50px;
   border: 2px solid;
-  border-color: #fff #fff #fff;
+  border-color: #fff;
   border-radius: 5px;
-  background: #de9e48;
+  background-color: #de9e48;
   color: #372c2e;
   font-size: 1.25rem;
   line-height: 1;
   padding: 0.6em 1em 0.4em;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 button:hover,
@@ -583,7 +587,9 @@ input[type='submit']:hover,
 .site .nf-form-content button:hover,
 .site .nf-form-content input[type='button']:hover,
 .site .nf-form-content input[type='submit']:hover {
-  border-color: #ccc #bbb #aaa;
+  border-color: #e6e6e6;
+  background-color: #ce8625;
+  color: #1b1516;
 }
 
 button:active, button:focus,
@@ -599,7 +605,7 @@ input[type='submit']:focus,
 .site .nf-form-content input[type='button']:focus,
 .site .nf-form-content input[type='submit']:active,
 .site .nf-form-content input[type='submit']:focus {
-  border-color: #aaa #bbb #bbb;
+  border-color: #fff;
 }
 
 input[type='text'],
@@ -622,10 +628,12 @@ textarea,
 .site .nf-form-content input:not([type='button']),
 .site .nf-form-content textarea {
   background: #201d1d;
-  color: #666;
+  color: #fdf9df;
   border: 1px solid #de9e48;
   border-radius: 5px;
-  padding: 3px;
+  padding: 0.5rem;
+  -webkit-transition: none;
+  transition: none;
 }
 
 input[type='text']:focus,
@@ -647,7 +655,11 @@ textarea:focus,
 .site .nf-form-content .list-select-wrap .nf-field-element > div:focus,
 .site .nf-form-content input:not([type='button']):focus,
 .site .nf-form-content textarea:focus {
-  color: #111;
+  border: 2px solid #de9e48;
+  background-color: #201d1d;
+  color: #fdf9df;
+  -webkit-transition: none;
+  transition: none;
 }
 
 select {
@@ -794,7 +806,7 @@ textarea {
 /* Contact page
 --------------------------------------------- */
 .page-contact .site-main .page {
-  padding: 1rem;
+  padding: 0 1rem;
   text-align: center;
 }
 
@@ -809,6 +821,26 @@ textarea {
 .page-contact .site-main .page .nf-form-content {
   max-width: 800px;
   padding: 0;
+}
+
+.page-contact .site-main .page .nf-form-content .label-above .nf-field-label,
+.page-contact .site-main .page .nf-form-content .label-below .nf-field-label,
+.page-contact .site-main .page .nf-form-content .label-hidden .nf-field-label {
+  margin-bottom: 0.5rem;
+}
+
+.page-contact .site-main .page .nf-error-msg,
+.page-contact .site-main .page .ninja-forms-req-symbol {
+  color: #fdf9df;
+}
+
+.page-contact .site-main .page #ninja_forms_required_items,
+.page-contact .site-main .page .nf-field-container {
+  margin-bottom: 2.25rem;
+}
+
+.page-contact .site-main .page #nf-field-3-container {
+  margin-bottom: 7rem;
 }
 
 /* Comments

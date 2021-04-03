@@ -21,10 +21,14 @@ textarea,
   color: $color__text-input;
   border: 1px solid $color__border-input;
   border-radius: 5px;
-  padding: 3px;
+  padding: 0.5rem;
+  transition: none;
 
   &:focus {
+    border: 2px solid $color__border-input;
+    background-color: $color__background-input;
     color: $color__text-input-focus;
+    transition: none;
   }
 }
 
