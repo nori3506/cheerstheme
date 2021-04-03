@@ -4,13 +4,26 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Roboto', helvetica, arial, sans-serif;
-  background: url('./assets/images/cheers-bg-8.png') center center no-repeat;
-  background-color: $main-color;
-  background-attachment: fixed;
-  background-size: cover;
-  color: white;
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  background-color: $color__background-body;
+  color: $color__text-main;
+  font-family: $font__main;
+  font-size: 1rem;
+  line-height: $font__line-height-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font__heading;
 }
 
 ul {

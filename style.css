@@ -71,7 +71,8 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -215,9 +216,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
 }
 
@@ -225,9 +226,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -236,9 +237,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -256,7 +257,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -288,9 +290,10 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box;
+[type='checkbox'],
+[type='radio'] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -299,8 +302,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -308,7 +311,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type='search'] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -318,7 +321,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -367,16 +370,30 @@ template {
 
 /* 1.3. Base ================ */
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-body {
-  font-family: "Roboto", helvetica, arial, sans-serif;
-  background: url("./assets/images/cheers-bg-8.png") center center no-repeat;
-  background-color: #372c2e;
-  background-attachment: fixed;
-  background-size: cover;
-  color: white;
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  background-color: #3f3230;
+  color: #fdf9df;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Asul", serif;
 }
 
 ul {
@@ -420,9 +437,16 @@ img {
   height: 100vh;
   z-index: 2000;
   padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -438,37 +462,161 @@ img {
 }
 
 .alert-danger {
-  color: #F04444;
+  color: #f04444;
   text-align: center;
   font-weight: 700;
 }
 
 .alert-success {
-  color: #50B861;
+  color: #50b861;
   text-align: center;
   font-weight: 700;
 }
 
-/* 2 Components =========================== */
-/* 2.1. Team ============ */
+/* 2 Elements =========================== */
+/* 2.1. Buttons ================ */
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
+.site .nf-form-content button,
+.site .nf-form-content input[type='button'],
+.site .nf-form-content input[type='submit'] {
+  width: 280px;
+  height: 50px;
+  border: 2px solid;
+  border-color: #fff;
+  border-radius: 5px;
+  background-color: #de9e48;
+  color: #372c2e;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.6em 1em 0.4em;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+button:hover,
+input[type='button']:hover,
+input[type='reset']:hover,
+input[type='submit']:hover,
+.site .nf-form-content button:hover,
+.site .nf-form-content input[type='button']:hover,
+.site .nf-form-content input[type='submit']:hover {
+  border-color: #e6e6e6;
+  background-color: #ce8625;
+  color: #1b1516;
+}
+
+button:active, button:focus,
+input[type='button']:active,
+input[type='button']:focus,
+input[type='reset']:active,
+input[type='reset']:focus,
+input[type='submit']:active,
+input[type='submit']:focus,
+.site .nf-form-content button:active,
+.site .nf-form-content button:focus,
+.site .nf-form-content input[type='button']:active,
+.site .nf-form-content input[type='button']:focus,
+.site .nf-form-content input[type='submit']:active,
+.site .nf-form-content input[type='submit']:focus {
+  border-color: #fff;
+}
+
+/* 2.2. Fields ================ */
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='tel'],
+input[type='range'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='color'],
+textarea,
+.site .nf-form-content .list-select-wrap .nf-field-element > div,
+.site .nf-form-content input:not([type='button']),
+.site .nf-form-content textarea {
+  background: #201d1d;
+  color: #fdf9df;
+  border: 1px solid #de9e48;
+  border-radius: 5px;
+  padding: 0.5rem;
+  -webkit-transition: none;
+  transition: none;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='url']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+input[type='number']:focus,
+input[type='tel']:focus,
+input[type='range']:focus,
+input[type='date']:focus,
+input[type='month']:focus,
+input[type='week']:focus,
+input[type='time']:focus,
+input[type='datetime']:focus,
+input[type='datetime-local']:focus,
+input[type='color']:focus,
+textarea:focus,
+.site .nf-form-content .list-select-wrap .nf-field-element > div:focus,
+.site .nf-form-content input:not([type='button']):focus,
+.site .nf-form-content textarea:focus {
+  border: 2px solid #de9e48;
+  background-color: #201d1d;
+  color: #fdf9df;
+  -webkit-transition: none;
+  transition: none;
+}
+
+select {
+  border: 1px solid #de9e48;
+}
+
+textarea {
+  width: 100%;
+}
+
+/* 3 Components =========================== */
+/* 3.1. Team ================ */
 .team {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: auto (1fr)[3];
+      grid-template-rows: auto repeat(3, 1fr);
   max-width: 1400px;
   margin: auto;
 }
+
 .team__title {
-  grid-column: 1/-1;
+  grid-column: 1 / -1;
   text-align: center;
 }
+
 .team__member-name {
   font-size: 24px;
 }
+
 .team__center-image {
-  grid-column: 2/3;
-  grid-row: 2/-1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  grid-row: 2 / -1;
 }
+
 .team__member-profile-image img {
   border: 2px solid #de9e48;
   border-radius: 50%;
@@ -478,105 +626,187 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
 .team article:nth-of-type(1) .upper-position {
   position: relative;
 }
+
 .team article:nth-of-type(1) .upper-position .arrow {
   width: 514px;
   border-bottom: 4px dashed #de9e48;
   position: absolute;
   bottom: -22rem;
   left: 39%;
-  transform: rotate(58deg);
+  -webkit-transform: rotate(58deg);
+          transform: rotate(58deg);
   padding-left: 2rem;
   font-size: 2rem;
 }
+
 .team article:nth-of-type(1) .team__member-profile-image {
   text-align: center;
 }
+
 .team article:nth-of-type(1) .team__member-profile-image img {
   margin-left: 1.5rem;
 }
+
 .team article:nth-of-type(2) .upper-position {
   position: relative;
 }
+
 .team article:nth-of-type(2) .upper-position .arrow {
   width: 238px;
   border-bottom: 4px dashed #de9e48;
   position: absolute;
   top: 6rem;
   right: 74%;
-  transform: rotate(356deg);
+  -webkit-transform: rotate(356deg);
+          transform: rotate(356deg);
   padding-right: 1rem;
   font-size: 2rem;
   text-align: end;
 }
+
 .team article:nth-of-type(2) .team__member-profile-image {
   text-align: center;
 }
+
 .team article:nth-of-type(2) .team__member-profile-image img {
   margin: 2rem 5rem 0 0;
 }
+
 .team article:nth-of-type(3) .upper-position {
   position: relative;
 }
+
 .team article:nth-of-type(3) .upper-position .arrow {
   width: 384px;
   border-bottom: 4px dashed #de9e48;
   position: absolute;
   bottom: -6rem;
   left: 53%;
-  transform: rotate(347deg);
+  -webkit-transform: rotate(347deg);
+          transform: rotate(347deg);
   padding-left: 2rem;
   font-size: 2rem;
 }
+
 .team article:nth-of-type(3) .team__member-profile-image {
   text-align: center;
 }
+
 .team article:nth-of-type(3) .team__member-profile-image img {
   margin: 2rem 5rem 0 0;
 }
+
 .team article:nth-of-type(4) .upper-position {
   position: relative;
 }
+
 .team article:nth-of-type(4) .upper-position .arrow {
   width: 538px;
   border-bottom: 4px dashed #de9e48;
   position: absolute;
   top: 9rem;
   right: 31%;
-  transform: rotate(315deg);
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
   padding-right: 1rem;
   font-size: 2rem;
   text-align: end;
 }
+
 .team article:nth-of-type(4) .team__member-profile-image {
   text-align: center;
 }
+
 .team article:nth-of-type(4) .team__member-profile-image img {
   margin: -7rem 0 0rem 11rem;
 }
+
 .team article:nth-of-type(5) .upper-position {
   position: relative;
 }
+
 .team article:nth-of-type(5) .upper-position .arrow {
   width: 342px;
   border-bottom: 4px dashed #de9e48;
   position: absolute;
   top: -7rem;
   right: 61%;
-  transform: rotate(23deg);
+  -webkit-transform: rotate(23deg);
+          transform: rotate(23deg);
   padding-right: 1rem;
   font-size: 2rem;
   text-align: end;
 }
+
 .team article:nth-of-type(5) .team__member-profile-image {
   text-align: center;
 }
+
 .team article:nth-of-type(5) .team__member-profile-image img {
   margin: -6rem 0 0 0;
 }
+
 .team article:nth-of-type(5) {
-  grid-column: 3/4;
-  grid-row: 4/5;
-}/*# sourceMappingURL=style.css.map */
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+}
+
+/* 3.2. Contact Page ================ */
+.page-contact .site-main .page {
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.page-contact .site-main .page .entry-title {
+  display: none;
+}
+
+.page-contact .site-main .page .nf-before-form-content {
+  display: none;
+}
+
+.page-contact .site-main .page .nf-form-content {
+  max-width: 800px;
+  padding: 0;
+}
+
+.page-contact .site-main .page .nf-form-content .label-above .nf-field-label,
+.page-contact .site-main .page .nf-form-content .label-below .nf-field-label,
+.page-contact .site-main .page .nf-form-content .label-hidden .nf-field-label {
+  margin-bottom: 0.5rem;
+}
+
+.page-contact .site-main .page .nf-error-msg,
+.page-contact .site-main .page .ninja-forms-req-symbol {
+  color: #fdf9df;
+}
+
+.page-contact .site-main .page #ninja_forms_required_items,
+.page-contact .site-main .page .nf-field-container {
+  margin-bottom: 2.25rem;
+}
+
+.page-contact .site-main .page #nf-field-3-container {
+  margin-bottom: 7rem;
+}
+
+.page-contact .site-main .page .nf-field-label label {
+  font-family: "Asul", serif;
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+
+.page-contact .site-main .page .nf-form-title h3 {
+  margin: 10rem 0 3rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+/*# sourceMappingURL=style.css.map */
