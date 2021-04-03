@@ -1,35 +1,35 @@
 .team {
   flex-flow: row wrap;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   max-width: 1400px;
   justify-content: center;
   margin: auto;
 
   &__intro-area {
-    flex: 0 0 30%;
+    flex: 0 0 27%;
 
-
-    .team__full-name{
+    .team__full-name {
       font-size: 1.8rem;
       text-align: center;
 
-      h2{
+      h2 {
+        color: $accent-color;
+        font-family: $font__heading;
+        font-weight: 100;
         margin-bottom: 0;
       }
     }
 
-    .team__member-position{
-      font-size: 1.5rem;
+    .team__member-position {
+      font-size: 1.2rem;
       text-align: center;
       margin-bottom: 2rem;
-
     }
 
-    .team__member-description{
-
+    .team__member-description {
+      line-height: 1.7rem;
     }
-
   }
 
 
