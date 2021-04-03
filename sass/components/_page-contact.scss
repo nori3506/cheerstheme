@@ -34,4 +34,16 @@
   #nf-field-3-container {
     margin-bottom: 7rem;
   }
+
+  .nf-field-label label {
+    font-family: $font__heading;
+    font-size: 1.875rem;
+    font-weight: 400;
+  }
+
+  .nf-form-title h3 {
+    margin: 10rem 0 3rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
 }
