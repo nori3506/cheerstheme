@@ -1,20 +1,83 @@
-/* Typography
---------------------------------------------- */
-@import "typography/typography";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Elements
---------------------------------------------- */
-@import "elements/body";
-@import "elements/hr";
-@import "elements/lists";
-@import "elements/media";
-@import "elements/tables";
+* {
+  box-sizing: border-box;
+}
 
-/* Links
---------------------------------------------- */
-@import "elements/links";
+body {
+  font-family: 'Roboto', helvetica, arial, sans-serif;
+  background: url('./assets/images/cheers-bg-8.png') center center no-repeat;
+  background-color: $main-color;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
 
-/* Forms
---------------------------------------------- */
-@import "elements/buttons";
-@import "elements/fields";
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  padding: 0 1.5rem;
+}
+
+.wrapper--narrow {
+  padding: 0 3rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: $header-height;
+  padding-bottom: $footer-height;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2000;
+  padding: 0 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background-color: rgba(black, 0.8);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.alert-danger {
+  color: $alert-color;
+  text-align: center;
+  font-weight: 700;
+}
+
+.alert-success {
+  color: $success-color;
+  text-align: center;
+  font-weight: 700;
+}
