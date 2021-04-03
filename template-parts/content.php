@@ -1,11 +1,8 @@
 <?php ?>
-
 <article <?php post_class(); ?>>
-  <header class="entry-header">
+  <div class="entry-header">
     <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-  </header><!-- .entry-header -->
-
-  <?php cheerstheme_post_thumbnail(); ?>
+  </div><!-- .entry-header -->
 
   <div class="entry-content">
     <?php
