@@ -1,14 +1,42 @@
 .team {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto repeat(3, 1fr);
+  flex-flow: row wrap;
+  display: flex;
+  gap: 1rem;
   max-width: 1400px;
+  justify-content: center;
   margin: auto;
+
+  &__intro-area {
+    flex: 0 0 30%;
+
+
+    .team__full-name{
+      font-size: 1.8rem;
+      text-align: center;
+
+      h2{
+        margin-bottom: 0;
+      }
+    }
+
+    .team__member-position{
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+
+    }
+
+    .team__member-description{
+
+    }
+
+  }
 
 
   // position: relative;
 
   &__title {
+    width: 100%;
     grid-column: 1 / -1;
     text-align: center;
   }

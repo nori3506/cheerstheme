@@ -1,7 +1,6 @@
 <?php ?>
 <article <?php post_class(); ?>>
   <div class="upper-position">
-    
     <div class="arrow"><?php the_field('name'); ?></div>
   </div>
   <div class="team__member-profile-image">
@@ -12,7 +11,6 @@
           echo wp_get_attachment_image($image, $size);
       }
     ?>
-
     <img src="<?php echo the_field('profile_image'); ?>" alt="">
   </div>
 
