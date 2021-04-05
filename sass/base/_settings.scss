@@ -2,8 +2,41 @@
 $main-color: #372c2e;
 $accent-color: #de9e48;
 $bg-light-color: #fdf9df;
-$alert-color: #F04444;
-$success-color: #50B861;
+$alert-color: #f04444;
+$success-color: #50b861;
+
+$color__background-body: #3f3230;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #de9e48;
+$color__background-button-hover: darken($color__background-button, 10%);
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+$color__background-input: #201d1d;
+
+$color__text-screen: #21759b;
+$color__text-input: #fdf9df;
+$color__text-input-focus: #fdf9df;
+$color__link: #4169e1; //royalblue
+$color__link-visited: #800080; //purple
+$color__link-hover: #191970; //midnightblue
+$color__text-main: #fdf9df;
+$color__button: #372c2e;
+$color__button-hover: darken(#372c2e, 10%);
+
+$color__border-button: #fff;
+$color__border-button-hover: darken(#fff, 10%);
+$color__border-button-focus: #fff;
+$color__border-input: #de9e48;
+$color__border-abbr: #666;
+
+// Typography
+$font__main: 'Roboto', sans-serif;
+$font__heading: 'Asul', serif;
+$font__code: monaco, consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+$font__pre: 'Courier 10 Pitch', courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
 
 // Breakpoints
 $tablet-breakpoint: 600px;

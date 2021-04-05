@@ -19,11 +19,12 @@
 		<?php post_class(); ?> 
 		id="<?php the_title_attribute(); ?>"
 		>
-		<h2><?php the_title(); ?></h2>
 		
 		<div class="about-cheers-content">
-			<?php the_content(); ?><?php the_post_thumbnail(); ?>
+			<h2>About <span>Cheers</span></h2>
+			<?php the_content(); ?>
 		</div>
+		<?php the_post_thumbnail(); ?>
 		</article>
 		
 		<?php endwhile;
@@ -88,14 +89,9 @@
 		<?php post_class(); ?> 
 		id="<?php the_title_attribute(); ?>"
 		>
-		<!-- get rid of this later -->
-		<h2><?php the_title(); ?></h2>
-		
-		<div class="function-content">
-			<p><?php the_field('app_function_description'); ?></p>
-			<img src="<?php the_field('app_function_image'); ?>" alt="app image">
-			<div><?php echo $counter; ?></div>
-		</div>
+				<div><?php echo $counter; ?></div>
+		<p><?php the_field('app_function_description'); ?></p>
+		<img src="<?php the_field('app_function_image'); ?>" alt="app image">
 		</article>
 		<?php $counter++ ?>
 		

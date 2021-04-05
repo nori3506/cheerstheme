@@ -1,0 +1,49 @@
+.page-contact .site-main .page {
+  padding: 0 1rem;
+  text-align: center;
+
+  .entry-title {
+    display: none;
+  }
+
+  .nf-before-form-content {
+    display: none;
+  }
+
+  .nf-form-content {
+    max-width: 800px;
+    padding: 0;
+  }
+
+  .nf-form-content .label-above .nf-field-label,
+  .nf-form-content .label-below .nf-field-label,
+  .nf-form-content .label-hidden .nf-field-label {
+    margin-bottom: 0.5rem;
+  }
+
+  .nf-error-msg,
+  .ninja-forms-req-symbol {
+    color: $color__text-main;
+  }
+
+  #ninja_forms_required_items,
+  .nf-field-container {
+    margin-bottom: 2.25rem;
+  }
+
+  #nf-field-3-container {
+    margin-bottom: 7rem;
+  }
+
+  .nf-field-label label {
+    font-family: $font__heading;
+    font-size: 1.875rem;
+    font-weight: 400;
+  }
+
+  .nf-form-title h3 {
+    margin: 10rem 0 3rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+}
