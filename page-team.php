@@ -22,12 +22,11 @@
         'posts_per_page' => '5',
         'orderby'        => 'rand'
       );
-
       $my_query = new WP_Query( $args );
       if( $my_query -> have_posts()):
         while( $my_query -> have_posts()):
           $my_query->the_post();
-          get_template_part('template-parts/content-team-member');
+          get_template_part('template-parts/content-team-member-intro');
         endwhile;
       else:
         get_template_part('template-parts/content-none.php');

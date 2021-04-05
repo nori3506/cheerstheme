@@ -1,0 +1,50 @@
+
+
+#primary {
+
+    .about-cheers-container article{
+        display: grid;
+
+
+        h2 {
+            //fix later
+            font-size: 28px;
+            
+            span {
+                color: $accent-color;
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: $tablet-breakpoint) {
+    
+
+
+}
+// font size 18px however, it's 1rem
+@media only screen and (min-width: $pc-breakpoint) {
+    .about-cheers-container article{
+        grid-template-columns: 60% 40%;
+        max-width: 1200px;
+        justify-self: center;
+        padding: 2rem;
+        //fix later
+        font-size: 18px;
+
+        .about-cheers-content {
+           display: flex;
+           flex-flow: column nowrap;
+           justify-content: center;
+
+        
+           h2 {
+               text-align: left;
+               // fix later
+               font-size: 46px !important;
+
+           }
+        }
+    }
+}
