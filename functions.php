@@ -43,3 +43,11 @@ function cheerstheme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'cheerstheme_scripts' );
 
+// Change post order in FAQ page
+add_action( 'pre_get_posts', 'change_loop_sort_order' );
+function change_loop_sort_order( $query ) {
+    if ( $query->is_archive() ) {
+		$query->set( 'order', 'ASC' );
+	  }
+}
+

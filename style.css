@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: cheerstheme
 Theme URI: http://underscores.me/
@@ -579,4 +580,54 @@ img {
 .team article:nth-of-type(5) {
   grid-column: 3/4;
   grid-row: 4/5;
+}
+
+/* 2.2. FAQ ============ */
+.accordion {
+  max-width: 60%;
+  margin: 0 auto;
+}
+.accordion .menu {
+  background-color: rgba(0, 0, 0, 0.35);
+  border: solid 1px #de9e48;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.accordion .menu:hover,
+.accordion .menu:active,
+.accordion .menu.is-active {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+.accordion .contents {
+  line-height: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition-duration: 0.2s;
+}
+.accordion .contents.is-open {
+  padding: 10px;
+  line-height: normal;
+  height: auto;
+  opacity: 1;
+}
+
+.accordion {
+  position: relative;
+}
+.accordion:after {
+  content: "▼";
+  color: #de9e48;
+  font-size: 18px;
+  right: 1rem;
+  top: 14px;
+  padding: 0 0 2px;
+  position: absolute;
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */
