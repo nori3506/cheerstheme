@@ -1,0 +1,41 @@
+
+.problem-solution-container {
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+
+@media only screen and (min-width: $tablet-breakpoint) {
+
+    .problem-solution-container {
+        height: 600px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
+        article {
+            padding: 2rem;
+            max-width: 1200px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                //fix later
+                font-size: 38px;
+            }
+
+            p {
+                text-align: left;
+                width: 560px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $pc-breakpoint) {
+
+}
