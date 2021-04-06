@@ -1,0 +1,112 @@
+header {
+
+.site-branding {
+    padding: 1.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+
+    .logo-download-icons {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+
+        .custom-logo {
+            width: 22vw;
+        }
+
+        .download-img {
+            width: 38vw;
+        }
+    }
+
+    .site-title, 
+    .site-description {
+        text-align: center;
+        margin: 0;
+        font-weight: 400;
+        font-family: $font__heading;
+    }
+
+    .site-title {
+        font-size: 38px;
+
+        &::first-letter {
+            color: $accent-color !important;
+            text-transform: uppercase;
+        }
+    }
+
+    .site-description {
+        font-size: 24px;
+    }
+
+
+}
+
+    nav {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 1.5rem;
+
+        .icon-wrapper {
+            height: 50px;
+            width: 50px;
+            // to center nav icons
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-menu {
+            width: 100%;
+
+            ul {
+                display: grid;
+                grid-gap: .7rem;
+            }
+
+            li {
+                background-color: rgba(0,0,0,.25);
+                border: 1px solid $accent-color;
+                border-radius: 5px;
+                padding: .7rem;
+                text-align: center;
+                //fix later
+                font-size: 20px;
+            }
+        }
+    }
+
+    #site-navigation .nav_toggle[aria-expanded='false'] {
+        background: url('./images/nav-icon.svg') no-repeat center center; 
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        color: transparent;
+        
+        &:focus {
+            outline: none;
+        }
+    }
+
+    #site-navigation .nav_toggle[aria-expanded='true'] {
+        background: url('./images/nav-close.svg') no-repeat center center; 
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        color: transparent;
+        
+        &:focus {
+            outline: none;
+        }
+    }
+
+}

@@ -1,24 +1,4 @@
-#primary {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-    box-shadow: 0 -20px 20px #DE9E48 inset;
-    //background-image: url('./images/cheers-bg-8.png');
-    
-    h2 {
-        font-weight: 400;
-    }
-}
-
-@media only screen and (min-width: $pc-breakpoint) {
-    #primary {
-        line-height: 38px;
-        box-shadow: none
-    }
-}
-
+@import 'wrapper';
 @import 'about';
 @import 'solution.scss';
 @import 'how_to_use';

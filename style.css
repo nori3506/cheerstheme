@@ -474,6 +474,133 @@ img {
   font-weight: 700;
 }
 
+body {
+  -webkit-box-shadow: 12px 0 17px -12px #DE9E48 inset;
+          box-shadow: 12px 0 17px -12px #DE9E48 inset;
+}
+
+.site {
+  -webkit-box-shadow: -12px 0 17px -12px #DE9E48 inset;
+          box-shadow: -12px 0 17px -12px #DE9E48 inset;
+}
+
+/* 2 Components =========================== */
+/* 2.1. Team ============ */
+.team {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+.team__intro-area {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 27%;
+          flex: 0 0 27%;
+}
+
+.team__intro-area .team__full-name {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.team__intro-area .team__full-name h2 {
+  color: #de9e48;
+  font-family: "Asul", serif;
+  font-weight: 100;
+  margin-bottom: 0;
+}
+
+.team__intro-area .team__member-position {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.team__intro-area .team__member-description {
+  line-height: 1.7rem;
+}
+
+.team__title {
+  font-weight: 100;
+  font-size: 3rem;
+  font-family: "Asul", serif;
+  width: 100%;
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+/* 2.2. FAQ ============ */
+.faqs {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.accordion {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.accordion .menu {
+  background-color: rgba(0, 0, 0, 0.35);
+  border: solid 1px #de9e48;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.accordion .menu:hover,
+.accordion .menu:active,
+.accordion .menu.is-active {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.accordion .contents {
+  line-height: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.accordion .contents.is-open {
+  padding: 10px;
+  line-height: normal;
+  height: auto;
+  opacity: 1;
+}
+
+.accordion {
+  position: relative;
+}
+
+.accordion:after {
+  content: '▼';
+  color: #de9e48;
+  font-size: 20px;
+  right: 1rem;
+  top: 14px;
+  padding: 0 0 2px;
+  position: absolute;
+  pointer-events: none;
+}
+
 /* 2 Elements =========================== */
 /* 2.1. Buttons ================ */
 button,
@@ -711,8 +838,6 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   padding: 1.5rem;
-  -webkit-box-shadow: 0 -20px 20px #DE9E48 inset;
-          box-shadow: 0 -20px 20px #DE9E48 inset;
 }
 
 #primary h2 {
@@ -901,6 +1026,11 @@ textarea {
   width: 100%;
 }
 
+.testimonials .owl-next:focus,
+.testimonials .owl-prev:focus {
+  outline: none;
+}
+
 .owl-carousel {
   width: 95vw !important;
 }
@@ -973,4 +1103,142 @@ textarea {
     height: 100px;
   }
 }
+
+/* 3.3  Header ================== */
+header .site-branding {
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+header .site-branding .logo-download-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3rem;
+}
+
+header .site-branding .logo-download-icons .custom-logo {
+  width: 22vw;
+}
+
+header .site-branding .logo-download-icons .download-img {
+  width: 38vw;
+}
+
+header .site-branding .site-title,
+header .site-branding .site-description {
+  text-align: center;
+  margin: 0;
+  font-weight: 400;
+  font-family: "Asul", serif;
+}
+
+header .site-branding .site-title {
+  font-size: 38px;
+}
+
+header .site-branding .site-title::first-letter {
+  color: #de9e48 !important;
+  text-transform: uppercase;
+}
+
+header .site-branding .site-description {
+  font-size: 24px;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+header nav .icon-wrapper {
+  height: 50px;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .nav-menu {
+  width: 100%;
+}
+
+header nav .nav-menu ul {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: .7rem;
+}
+
+header nav .nav-menu li {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid #de9e48;
+  border-radius: 5px;
+  padding: .7rem;
+  text-align: center;
+  font-size: 20px;
+}
+
+header #site-navigation .nav_toggle[aria-expanded='false'] {
+  background: url("./images/nav-icon.svg") no-repeat center center;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  color: transparent;
+}
+
+header #site-navigation .nav_toggle[aria-expanded='false']:focus {
+  outline: none;
+}
+
+header #site-navigation .nav_toggle[aria-expanded='true'] {
+  background: url("./images/nav-close.svg") no-repeat center center;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  color: transparent;
+}
+
+header #site-navigation .nav_toggle[aria-expanded='true']:focus {
+  outline: none;
+}
+
+/* 3.4  Footer =============== */
 /*# sourceMappingURL=style.css.map */

@@ -16,8 +16,20 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<?php
-			the_custom_logo();
+			<div class="logo-download-icons">
+				<?php the_custom_logo(); ?>
+				<?php 
+				if ( is_front_page() && is_home() ) :
+					?>
+					<a href="#"><img src="./wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>
+					<?php
+				else :
+					?>
+					<a href="#"><img src="../wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>
+				<?php endif; ?>		
+			</div>	
+
+			<?php 
 			if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -35,11 +47,16 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'cheerstheme' ); ?></button>
+			<div class="icon-wrapper">
+			<!-- changes to button with JS, this is just a container-->
+			<div hidden class="data-menu-button">Menu</div>
+			</div>
 			<?php
 			wp_nav_menu(
 				array(
 					'theme_location' => 'menu-1',
+					'container'  =>  'div',
+					'container_class'  =>  'nav-menu data-menu'
 				)
 			);
 			?>

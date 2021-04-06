@@ -108,16 +108,5 @@
 		<?php echo do_shortcode('[slide-anything id="94"]'); ?>
 	</div>
 
-	<?php
-		if ( have_posts() ) :
-			while ( have_posts() ) :// 中身はまだ何もない
-				the_post();
-				get_template_part( 'template-parts/content', get_post_type() );
-			endwhile;
-			the_posts_navigation(); // 中身はまだ何もない
-		else :
-			get_template_part( 'template-parts/content', 'none' );
-		endif;
-	?>
 </main><!-- #main -->
 <?php get_footer(); ?>
