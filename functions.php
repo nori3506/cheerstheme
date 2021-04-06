@@ -2,7 +2,7 @@
 
 if ( ! function_exists( 'cheerstheme_setup' ) ) :
 	function cheerstheme_setup() {
-		
+
 		load_theme_textdomain( 'cheerstheme', get_template_directory() . '/languages' );
 
 		add_theme_support( 'automatic-feed-links' );
@@ -49,10 +49,18 @@ function cheerstheme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'cheerstheme_scripts' );
 
+// Change post order in FAQ page
+add_action( 'pre_get_posts', 'change_loop_sort_order' );
+function change_loop_sort_order( $query ) {
+    if ( $query->is_archive() ) {
+		$query->set( 'order', 'ASC' );
+	  }
+}
+
 // Add page slug to body class
 function pine_add_page_slug_body_class( $classes ) {
     global $post;
-    
+
     if ( isset( $post ) ) {
         $classes[] = 'page-' . $post->post_name;
     }

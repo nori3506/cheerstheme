@@ -30,6 +30,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* 1.3. Base ================ */
 @import 'base/base';
 
+/* 2 Components =========================== */
+
+/* 2.1. Team ============ */
+@import 'components/team';
+
+/* 2.2. FAQ ============ */
+@import 'components/faq';
 /* 2 Elements =========================== */
 /* 2.1. Buttons ================ */
 @import 'elements/buttons';
