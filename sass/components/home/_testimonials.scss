@@ -9,6 +9,13 @@
     .owl-item {
         width: 100%;
     }
+
+    .owl-next,
+    .owl-prev {
+        &:focus {
+            outline: none;
+        }
+    }
 }
 
 .owl-carousel {

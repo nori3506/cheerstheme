@@ -8,6 +8,7 @@
 				)
 			);
 		?>
+    <p>Powered by team Burnabees</p>
 
 	</footer><!-- #colophon -->
 </div><!-- #page -->
