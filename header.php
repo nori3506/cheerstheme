@@ -12,7 +12,6 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'cheerstheme' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
@@ -61,4 +60,17 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+
+		<!-- only for desktop layout -->
+		<div class="desktop-download">
+			<?php
+				if ( is_front_page() && is_home() ) :
+					?>
+					<a href="#"><img src="./wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>
+					<?php
+				else :
+					?>
+					<a href="#"><img src="../wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>
+			<?php endif; ?>
+		</div>
 	</header><!-- #masthead -->
