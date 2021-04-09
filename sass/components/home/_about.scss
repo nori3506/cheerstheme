@@ -24,7 +24,7 @@
 
 }
 // font size 18px however, it's 1rem
-@media only screen and (min-width: $pc-breakpoint) {
+@media only screen and (min-width: $tablet-breakpoint) {
     .about-cheers-container article{
         grid-template-columns: 60% 40%;
         max-width: 1200px;
