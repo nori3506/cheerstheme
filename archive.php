@@ -22,7 +22,7 @@ get_header();
 				?>
 			</header>
 			<?php else :?>
-					<h1>FAQ</h1>
+			 	<h1>FAQ</h1>
 			<?php endif;?>
 
 			<!-- .page-header -->
