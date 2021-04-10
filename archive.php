@@ -14,12 +14,18 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
+			<?php if ( !is_post_type_archive('faqs') ): ?>
 			<header class="page-header">
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
-			</header><!-- .page-header -->
+			</header>
+			<?php else :?>
+			 	<h1>FAQ</h1>
+			<?php endif;?>
+
+			<!-- .page-header -->
 
 			<?php
 			/* Start the Loop */
@@ -52,6 +58,13 @@ get_header();
 
 	</main><!-- #main -->
 
-<?php
-get_sidebar();
-get_footer();
+
+
+
+	<?php if ( !is_post_type_archive('faqs') ):
+		get_sidebar();
+		get_footer();
+	else :
+		get_footer();
+
+	endif;?>
