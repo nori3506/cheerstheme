@@ -490,18 +490,46 @@ body {
   justify-content: center;
   margin: auto;
 }
+.team__member-intro {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1400px;
+}
 .team__intro-area {
   flex: 0 0 27%;
+}
+@media screen and (max-width: 1100px) {
+  .team__intro-area {
+    flex: 0 0 45%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .team__intro-area {
+    flex: 0 0 100%;
+    padding-bottom: 6rem;
+  }
 }
 .team__intro-area .team__full-name {
   font-size: 1.8rem;
   text-align: center;
+}
+@media screen and (max-width: 1300px) {
+  .team__intro-area .team__full-name {
+    font-size: 1.5rem;
+  }
 }
 .team__intro-area .team__full-name h2 {
   color: #de9e48;
   font-family: "Asul", serif;
   font-weight: 100;
   margin-bottom: 0;
+}
+@media screen and (max-width: 650px) {
+  .team__intro-area .team__full-name h2 {
+    margin-top: 0;
+  }
 }
 .team__intro-area .team__member-position {
   font-size: 1.2rem;
@@ -511,6 +539,29 @@ body {
 .team__intro-area .team__member-description {
   line-height: 1.7rem;
 }
+@media screen and (max-width: 650px) {
+  .team__intro-area .team__member-description {
+    width: 80%;
+    margin: auto;
+  }
+}
+.team__intro-area .team__prof-image {
+  display: none;
+  text-align: center;
+}
+@media screen and (max-width: 650px) {
+  .team__intro-area .team__prof-image {
+    display: block;
+  }
+}
+.team__intro-area .team__prof-image img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 4px #de9e48 solid;
+}
 .team__title {
   font-weight: 100;
   font-size: 3rem;
@@ -518,6 +569,17 @@ body {
   width: 100%;
   grid-column: 1/-1;
   text-align: center;
+}
+@media screen and (max-width: 650px) {
+  .team__title {
+    width: 80%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 650px) {
+  .team__center-image {
+    display: none;
+  }
 }
 
 /* 2.2. FAQ ============ */
@@ -694,18 +756,46 @@ textarea {
   justify-content: center;
   margin: auto;
 }
+.team__member-intro {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1400px;
+}
 .team__intro-area {
   flex: 0 0 27%;
+}
+@media screen and (max-width: 1100px) {
+  .team__intro-area {
+    flex: 0 0 45%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .team__intro-area {
+    flex: 0 0 100%;
+    padding-bottom: 6rem;
+  }
 }
 .team__intro-area .team__full-name {
   font-size: 1.8rem;
   text-align: center;
+}
+@media screen and (max-width: 1300px) {
+  .team__intro-area .team__full-name {
+    font-size: 1.5rem;
+  }
 }
 .team__intro-area .team__full-name h2 {
   color: #de9e48;
   font-family: "Asul", serif;
   font-weight: 100;
   margin-bottom: 0;
+}
+@media screen and (max-width: 650px) {
+  .team__intro-area .team__full-name h2 {
+    margin-top: 0;
+  }
 }
 .team__intro-area .team__member-position {
   font-size: 1.2rem;
@@ -715,6 +805,29 @@ textarea {
 .team__intro-area .team__member-description {
   line-height: 1.7rem;
 }
+@media screen and (max-width: 650px) {
+  .team__intro-area .team__member-description {
+    width: 80%;
+    margin: auto;
+  }
+}
+.team__intro-area .team__prof-image {
+  display: none;
+  text-align: center;
+}
+@media screen and (max-width: 650px) {
+  .team__intro-area .team__prof-image {
+    display: block;
+  }
+}
+.team__intro-area .team__prof-image img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 4px #de9e48 solid;
+}
 .team__title {
   font-weight: 100;
   font-size: 3rem;
@@ -722,6 +835,17 @@ textarea {
   width: 100%;
   grid-column: 1/-1;
   text-align: center;
+}
+@media screen and (max-width: 650px) {
+  .team__title {
+    width: 80%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 650px) {
+  .team__center-image {
+    display: none;
+  }
 }
 
 /* 3.2. Contact Page ================ */
