@@ -490,12 +490,34 @@ body {
   justify-content: center;
   margin: auto;
 }
+.team__member-intro {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1400px;
+}
 .team__intro-area {
   flex: 0 0 27%;
+}
+@media screen and (max-width: 1100px) {
+  .team__intro-area {
+    flex: 0 0 45%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .team__intro-area {
+    flex: 0 0 100%;
+  }
 }
 .team__intro-area .team__full-name {
   font-size: 1.8rem;
   text-align: center;
+}
+@media screen and (max-width: 1300px) {
+  .team__intro-area .team__full-name {
+    font-size: 1.5rem;
+  }
 }
 .team__intro-area .team__full-name h2 {
   color: #de9e48;
@@ -518,6 +540,11 @@ body {
   width: 100%;
   grid-column: 1/-1;
   text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .team__center-image {
+    display: none;
+  }
 }
 
 /* 2.2. FAQ ============ */
@@ -694,12 +721,34 @@ textarea {
   justify-content: center;
   margin: auto;
 }
+.team__member-intro {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1400px;
+}
 .team__intro-area {
   flex: 0 0 27%;
+}
+@media screen and (max-width: 1100px) {
+  .team__intro-area {
+    flex: 0 0 45%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .team__intro-area {
+    flex: 0 0 100%;
+  }
 }
 .team__intro-area .team__full-name {
   font-size: 1.8rem;
   text-align: center;
+}
+@media screen and (max-width: 1300px) {
+  .team__intro-area .team__full-name {
+    font-size: 1.5rem;
+  }
 }
 .team__intro-area .team__full-name h2 {
   color: #de9e48;
@@ -722,6 +771,11 @@ textarea {
   width: 100%;
   grid-column: 1/-1;
   text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .team__center-image {
+    display: none;
+  }
 }
 
 /* 3.2. Contact Page ================ */
