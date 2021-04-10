@@ -505,9 +505,10 @@ body {
     flex: 0 0 45%;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .team__intro-area {
     flex: 0 0 100%;
+    padding-bottom: 6rem;
   }
 }
 .team__intro-area .team__full-name {
@@ -525,6 +526,11 @@ body {
   font-weight: 100;
   margin-bottom: 0;
 }
+@media screen and (max-width: 650px) {
+  .team__intro-area .team__full-name h2 {
+    margin-top: 0;
+  }
+}
 .team__intro-area .team__member-position {
   font-size: 1.2rem;
   text-align: center;
@@ -532,6 +538,29 @@ body {
 }
 .team__intro-area .team__member-description {
   line-height: 1.7rem;
+}
+@media screen and (max-width: 650px) {
+  .team__intro-area .team__member-description {
+    width: 80%;
+    margin: auto;
+  }
+}
+.team__intro-area .team__prof-image {
+  display: none;
+  text-align: center;
+}
+@media screen and (max-width: 650px) {
+  .team__intro-area .team__prof-image {
+    display: block;
+  }
+}
+.team__intro-area .team__prof-image img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 4px #de9e48 solid;
 }
 .team__title {
   font-weight: 100;
@@ -541,7 +570,13 @@ body {
   grid-column: 1/-1;
   text-align: center;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
+  .team__title {
+    width: 80%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 650px) {
   .team__center-image {
     display: none;
   }
@@ -736,9 +771,10 @@ textarea {
     flex: 0 0 45%;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .team__intro-area {
     flex: 0 0 100%;
+    padding-bottom: 6rem;
   }
 }
 .team__intro-area .team__full-name {
@@ -756,6 +792,11 @@ textarea {
   font-weight: 100;
   margin-bottom: 0;
 }
+@media screen and (max-width: 650px) {
+  .team__intro-area .team__full-name h2 {
+    margin-top: 0;
+  }
+}
 .team__intro-area .team__member-position {
   font-size: 1.2rem;
   text-align: center;
@@ -763,6 +804,29 @@ textarea {
 }
 .team__intro-area .team__member-description {
   line-height: 1.7rem;
+}
+@media screen and (max-width: 650px) {
+  .team__intro-area .team__member-description {
+    width: 80%;
+    margin: auto;
+  }
+}
+.team__intro-area .team__prof-image {
+  display: none;
+  text-align: center;
+}
+@media screen and (max-width: 650px) {
+  .team__intro-area .team__prof-image {
+    display: block;
+  }
+}
+.team__intro-area .team__prof-image img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 4px #de9e48 solid;
 }
 .team__title {
   font-weight: 100;
@@ -772,7 +836,13 @@ textarea {
   grid-column: 1/-1;
   text-align: center;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
+  .team__title {
+    width: 80%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 650px) {
   .team__center-image {
     display: none;
   }
