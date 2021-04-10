@@ -14,7 +14,7 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-			<?php if ( ! is_post_type_archive('faqs') ): ?>
+			<?php if ( !is_post_type_archive('faqs') ): ?>
 			<header class="page-header">
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
