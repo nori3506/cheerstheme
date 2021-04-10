@@ -61,7 +61,7 @@ get_header();
 
 
 
-	<?php if ( ! is_post_type_archive('faqs') ):
+	<?php if ( !is_post_type_archive('faqs') ):
 		get_sidebar();
 		get_footer();
 	else :
