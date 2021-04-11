@@ -107,7 +107,7 @@
 		<!-- testimonials -->
 		<div class="testimonials">
 			<h2>Testimonials</h2>
-			<?php echo do_shortcode('[slide-anything id="94"]'); ?>
+			<?php echo do_shortcode('[slide-anything id="99"]'); ?>
 		</div>
 
 </main><!-- #main -->
