@@ -1,5 +1,6 @@
 
 .problem-solution-container {
+    margin-bottom: 5rem;
 
     h2 {
         font-size: 24px;
@@ -14,10 +15,11 @@
         display: flex;
         text-align: center;
         justify-content: center;
+        margin-bottom: 0;
 
         article {
             padding: 2rem;
-            max-width: 1200px;
+            max-width: $x-large-max-width;
             display: flex;
             flex-flow: column nowrap;
             justify-content: center;
@@ -31,11 +33,14 @@
             p {
                 text-align: left;
                 width: 560px;
+                font-size: 18px;
             }
         }
     }
 }
 
 @media only screen and (min-width: $pc-breakpoint) {
-
+    .problem-solution-container {
+        margin-bottom: 5rem;
+    }
 }

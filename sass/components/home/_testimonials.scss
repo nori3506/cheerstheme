@@ -27,7 +27,7 @@
 
     p:not(:last-of-type) {
         background-color:#3F3230;
-        box-shadow: 0 0 20px $accent-color inset;
+        box-shadow: 0 -4px 20px rgba($color: $accent-color, $alpha: 0.7) inset;
         border-radius: 5px;
         height: 230px;
         display: flex;
@@ -75,6 +75,13 @@
 
 
 @media only screen and (min-width: $tablet-breakpoint) {
+    .testimonials {
+        padding-bottom: 4rem;
+
+        h2 {
+            text-align: center;
+        }
+    }
 
 }
 
@@ -82,7 +89,7 @@
 
     .testimonials {
         padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding-bottom: 10rem;
         h2 {
             text-align: center;
             font-size: 38px;

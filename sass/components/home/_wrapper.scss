@@ -6,16 +6,28 @@
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
-    //background-image: url('./images/cheers-bg-8.png');
     
     h2 {
         font-weight: 400;
     }
 }
 
-@media only screen and (min-width: $pc-breakpoint) {
+@media only screen and (min-width: $tablet-breakpoint) {
     #primary {
-        line-height: 38px;
-        box-shadow: none
+        line-height: 1.5;
+        box-shadow: none;
+        background: url('./images/background-right.png') no-repeat 0% 34%;
+        background-size: 30%;
     }
 }
+
+
+@media only screen and (min-width: $pc-breakpoint) {
+
+    #primary {
+        line-height: 38px;
+    }
+}
+
+
+
