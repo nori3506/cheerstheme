@@ -20,16 +20,15 @@
     menu.hidden = true;
   })()
 
-  // desctop screen navigation
+  // desktop screen navigation
   function deleteNavIcon(minScreen) {
-    // menu ul container
+    // get menu ul container
     const menu = document.querySelector('.data-menu');
-    // button
+    // get button
     const toggleMenuButton = document.querySelector('.nav_toggle');
     let expanded = toggleMenuButton.getAttribute('aria-expanded') === 'true' || false;
     if (minScreen.matches) { // If media query matches
-      // show the menu items
-      // change the icon to "opened"
+      // change the icon to "opened", and show menu items
       toggleMenuButton.setAttribute('aria-expanded', true);
       if(menu.hidden) {
         menu.hidden = !menu.hidden;
@@ -38,6 +37,7 @@
       toggleMenuButton.style.display = "none";
       
     } else {
+      // when screen shrinks, it always shows closed menu
       toggleMenuButton.setAttribute('aria-expanded', false);
       menu.hidden = true;
       // show menu icon again
@@ -45,10 +45,10 @@
     }
   }
   
-  var largeScreen = window.matchMedia("(min-width: 850px)")
-  // if it's smaller thatn 700px, icon disappear and items show up
+  var largeScreen = window.matchMedia("(min-width: 700px)")
+  // if it's smaller than a certain break point, icon disappears and items show up
   deleteNavIcon(largeScreen) 
-  largeScreen.addListener(deleteNavIcon) // Attach listener function on state changes
+  largeScreen.addListener(deleteNavIcon) 
 
 
   

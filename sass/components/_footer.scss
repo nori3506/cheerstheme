@@ -1,3 +1,38 @@
-footer {
+@media only screen and (min-width: $tablet-breakpoint) {
+    footer {
+        box-shadow: 0 4px 20px 0 rgba($color: $accent-color, $alpha: .7) inset;
+        padding: 1.5rem 3rem;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+    
+        div {
+            order: 2;
+            ul {
+                margin: 0;
+                display: flex; 
+                li {
+                    margin: 1rem;
+                }
+            }
+        }
+    
+        p {
+            order: 1;
+            margin: 0;
+            font-family: $font__heading;
+            font-size: 17px;
+            letter-spacing: .16rem;
+        }
+    }
 
+}
+
+@media only screen and (min-width: $pc-breakpoint) {
+    footer {
+        p {
+            font-size: 20px;
+        }
+    }
 }

@@ -4,7 +4,8 @@
 
     .about-cheers-container article{
         display: grid;
-
+        margin-bottom: 2rem;
+        max-width: $x-large-max-width;
 
         h2 {
             //fix later
@@ -14,37 +15,74 @@
                 color: $accent-color;
             }
         }
-    }
 
-}
+        .about-featured-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 0;
 
-@media only screen and (min-width: $tablet-breakpoint) {
-    
-
-
-}
-// font size 18px however, it's 1rem
-@media only screen and (min-width: $tablet-breakpoint) {
-    .about-cheers-container article{
-        grid-template-columns: 60% 40%;
-        max-width: 1200px;
-        justify-self: center;
-        padding: 2rem;
-        //fix later
-        font-size: 18px;
-
-        .about-cheers-content {
-           display: flex;
-           flex-flow: column nowrap;
-           justify-content: center;
-
-        
-           h2 {
-               text-align: left;
-               // fix later
-               font-size: 46px !important;
-
-           }
+            img {
+                max-width: initial;
+                width: 50vw;
+                box-shadow: 5px 5px 100px 0px rgba($color: #DE9E48
+                , $alpha: 0.4);
+                display: block;
+                
+            }
         }
     }
+
+    
+
+}
+
+// font size 18px however, it's 1rem
+@media only screen and (min-width: $tablet-breakpoint) {
+    #primary {
+        .about-cheers-container article{
+            grid-template-columns: 60% 40%;
+            justify-self: center;
+            padding: 2rem;
+            //fix later
+            font-size: 18px;
+            margin-bottom: 0;
+    
+            .about-cheers-content {
+               display: flex;
+               flex-flow: column nowrap;
+               justify-content: center;
+    
+            
+               h2 {
+                   text-align: left;
+                   // fix later
+                   font-size: 46px !important;  
+                   margin-top: .5rem;
+                   margin-bottom: .5rem;
+               }
+    
+            }
+    
+            .about-featured-image {
+                img {
+                    max-width: initial !important;
+                    width: 20vw !important;             
+                }
+            }
+        }
+    }
+}
+    
+
+@media only screen and (min-width: $pc-breakpoint) {
+
+    #primary {
+        .about-cheers-container article {
+            grid-template-columns: 50% 50%;
+        }
+    }
+
+
+
 }

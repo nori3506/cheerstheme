@@ -1,6 +1,7 @@
 .how-to-use-container {
     display: grid;
     grid-template-columns: 1fr;
+    max-width: 1400px;
 
     article {
         display: flex;
@@ -8,8 +9,11 @@
         justify-content: center;
         align-items: center;
         font-family: $font__heading;
+        width: calc(100vw - 3rem);
+        padding-bottom: 4rem;
 
-        div {
+
+        .order-number {
             border: 2px solid $accent-color;
             border-radius: 50%;
             width: 53px;
@@ -23,23 +27,28 @@
         }
 
         p {
-            font-size: 20px;
+            font-size: 18px;
+            margin-top: .5rem;
         }
 
+        img {
+            max-width: initial;
+            width: 50vw;
+            box-shadow: 5px 5px 100px 0px rgba($color: #DE9E48
+            , $alpha: 0.5);
+            display: block;
+            
+        }
     }
 }
 
 @media only screen and (min-width: $tablet-breakpoint) {
-
-}
-
-@media only screen and (min-width: $pc-breakpoint) {
     .how-to-use-container {
         grid-template-columns: 1fr 1fr 1fr;
-        max-width: 1500px;
+        width: calc(100vw - 6rem);
+
 
         h2 {
-
             //fix later
             font-size: 38px;
             text-align: center;
@@ -48,9 +57,14 @@
 
         article {
             display: flex;
+            width: 100%;
 
-            div {
+            .order-number {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
                 order: 3;
+                margin: 1rem;
             }
 
             p {
@@ -59,7 +73,45 @@
 
             img {
                 order: 2;
+                max-width: initial !important;
+                width: 18vw !important; 
             }
         }
+
+
+
+        
+    }
+}
+
+@media only screen and (min-width: $pc-breakpoint) {
+    .how-to-use-container {
+        width: 100%;
+
+        h2 {
+            padding-left: 1.5rem;
+        }
+
+        article {
+
+                .order-number {
+                    width: 53px;
+                    height: 53px;
+                    font-size: 24px;
+                }
+
+                img {
+                    max-width: initial !important;
+                    width: 18vw !important;             
+                }
+
+                p {
+                    font-size: 24px;
+                }
+        }
+
+
+
+        
     }
 }

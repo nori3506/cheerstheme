@@ -39,9 +39,12 @@ $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 
 // Breakpoints
-$tablet-breakpoint: 750px;
+$tablet-breakpoint: 700px;
 $pc-breakpoint: 960px;
 $menu-breakpoint: 850px;
+
+// Content Max Width
+$x-large-max-width: 1200px;
 
 // Header & Footer Height
 $header-height: 56px;

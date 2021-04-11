@@ -94,18 +94,22 @@ img {
   text-align: center;
   font-weight: 700;
 }
-
+// background decoration left glow for mobile screen
 body {
   box-shadow: 12px 0 17px -12px #DE9E48 inset;
 }
-
+// background decoration right glow for mobile screen
 .site {
   box-shadow: -12px 0 17px -12px #DE9E48 inset;
 }
 
-@media only screen and (min-width: $pc-breakpoint) {
+@media only screen and (min-width: $tablet-breakpoint) {
   body {
     box-shadow: none;
+    background-image: url('./images/background-above.png');
+    background-repeat: no-repeat;
+    background-position: 140% 100%;
+    background-size: 50%;
   }
   
   .site {
