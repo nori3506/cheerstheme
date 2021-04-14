@@ -106,6 +106,7 @@
 	
 		<!-- testimonials -->
 		<div class="testimonials">
+
 			<h3>Testimonials</h3>
 			<?php
 			$args = array(
@@ -126,6 +127,7 @@
 			get_template_part('template-parts/content-none.php');
 			endif;
 		?>
+
 		</div>
 
 </main><!-- #main -->
