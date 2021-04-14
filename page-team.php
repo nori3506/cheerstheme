@@ -8,7 +8,7 @@
 <?php get_header(); ?>
 
 	<main id="team" class="team">
-    <h2 class="team__title">Our team</h2>
+    <h2 class="team__title">Our Team</h2>
     <div class="team__center-image">
       <?php
         $page_id = 28;

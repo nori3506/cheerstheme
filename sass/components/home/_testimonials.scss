@@ -1,10 +1,9 @@
 .testimonials {
     font-family: $font__heading;
+    padding-bottom: 5rem;
 
-    h2 {
+    h3 {
         padding: 0 1rem;
-        //fix later
-        font-size: 24px;
     }
     .owl-item {
         width: 100%;
@@ -36,8 +35,6 @@
         position: relative;
         width: 85%;
         margin: 0 auto;
-        // fix later
-        font-size: 18px;
 
         &::before {
             content: '“';
@@ -76,11 +73,17 @@
 
 @media only screen and (min-width: $tablet-breakpoint) {
     .testimonials {
-        padding-bottom: 4rem;
+        padding-bottom: 10rem;
 
-        h2 {
+        h3 {
             text-align: center;
+            font-size: $font-tablet-h3;
         }
+
+        p {
+            font-size: $font-tablet-p;
+        }
+
     }
 
 }
@@ -88,18 +91,14 @@
 @media only screen and (min-width: $pc-breakpoint) {
 
     .testimonials {
-        padding-top: 6rem;
-        padding-bottom: 10rem;
-        h2 {
-            text-align: center;
-            font-size: 38px;
-        }
+        padding-top: 5vh;
+        padding-bottom: 12vh;
     }
 
     .owl-carousel .owl-item div{
         img {
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
         }
     }
 }

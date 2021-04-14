@@ -2,24 +2,14 @@
 $main-color: #372c2e;
 $accent-color: #de9e48;
 $bg-light-color: #fdf9df;
-$alert-color: #f04444;
-$success-color: #50b861;
 
 $color__background-body: #3f3230;
-$color__background-screen: #f1f1f1;
-$color__background-hr: #ccc;
 $color__background-button: #de9e48;
 $color__background-button-hover: darken($color__background-button, 10%);
-$color__background-pre: #eee;
-$color__background-ins: #fff9c0;
 $color__background-input: #201d1d;
 
-$color__text-screen: #21759b;
 $color__text-input: #fdf9df;
 $color__text-input-focus: #fdf9df;
-$color__link: #4169e1; //royalblue
-$color__link-visited: #800080; //purple
-$color__link-hover: #191970; //midnightblue
 $color__text-main: #fdf9df;
 $color__button: #372c2e;
 $color__button-hover: darken(#372c2e, 10%);
@@ -28,23 +18,22 @@ $color__border-button: #fff;
 $color__border-button-hover: darken(#fff, 10%);
 $color__border-button-focus: #fff;
 $color__border-input: #de9e48;
-$color__border-abbr: #666;
+
 
 // Typography
 $font__main: 'Roboto', sans-serif;
 $font__heading: 'Asul', serif;
 $font__code: monaco, consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
 $font__pre: 'Courier 10 Pitch', courier, monospace;
-$font__line-height-body: 1.5;
+$line-height: 1.5;
 $font__line-height-pre: 1.6;
 
 // Breakpoints
 $tablet-breakpoint: 700px;
 $pc-breakpoint: 960px;
-$menu-breakpoint: 850px;
 
 // Content Max Width
-$x-large-max-width: 1200px;
+$max-width: 1200px;
 
 // Header & Footer Height
 $header-height: 56px;
@@ -52,8 +41,24 @@ $footer-height: 84px;
 $height_input: 50px;
 
 // Font Size
-$font-xs: 14px;
-$font-sm: 16px;
-$font-md: 20px;
-$font-lg: 24px;
-$font-xl: 32px;
+$font-mobile-p: 1rem;
+$font-mobile-h1: 2.1rem;
+$font-mobile-h2: 1.75rem;
+$font-mobile-h3: 1.5rem;
+
+//tablet font size
+$font-tablet-p: 1rem;
+$font-tablet-h1: 2.5rem;
+$font-tablet-h2: 2.2rem;
+$font-tablet-h3: 2rem; 
+
+// Desktop Font Size
+$font-desktop-p: 1rem;
+$font-desktop-h1: 2.5rem;
+$font-desktop-h2: 2.2rem;
+$font-desktop-h3: 2rem;
+
+// padding for main
+$mobile-padding: 1.5rem;
+$tablet-padding: 10vh 3rem;
+$desktop-padding: 10vh 3rem;

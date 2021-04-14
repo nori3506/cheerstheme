@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="primary" class="site-main"> 
+<main id="primary" class="site-main front-page"> 
 	
 		<!-- About Cheers -->
 		<section class="about-cheers-container">
@@ -54,7 +54,7 @@
 			<?php post_class(); ?>
 			id="<?php the_title_attribute(); ?>"
 			>
-			<h2><?php the_title(); ?></h2>
+			<h3><?php the_title(); ?></h3>
 	
 			<div class="problem-solution-content">
 				<?php the_content(); ?><?php the_post_thumbnail(); ?>
@@ -80,7 +80,7 @@
 	
 			$my_query = new WP_Query( $args );
 	
-			?><h2>How to use</h2><?php
+			?><h3>How to use</h3><?php
 	
 			if ( $my_query->have_posts() ) :
 				$counter = 1;
@@ -106,8 +106,26 @@
 	
 		<!-- testimonials -->
 		<div class="testimonials">
-			<h2>Testimonials</h2>
-			<?php echo do_shortcode('[slide-anything id="94"]'); ?>
+			<h3>Testimonials</h3>
+			<?php
+			$args = array(
+			'post_type'       =>    'slider',
+			'posts_per_page'  =>    '1',
+			);
+	
+			$slider_query = new WP_Query( $args );
+	
+			if ( $slider_query->have_posts() ) :
+			while ( $slider_query->have_posts() ) :
+				$slider_query->the_post(); ?>
+	
+			<?php the_content(); ?>
+	
+			<?php endwhile;
+			else :
+			get_template_part('template-parts/content-none.php');
+			endif;
+		?>
 		</div>
 
 </main><!-- #main -->

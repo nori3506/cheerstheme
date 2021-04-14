@@ -32,7 +32,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -386,6 +386,7 @@ textarea {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
+  font-weight: 300;
 }
 
 h1,
@@ -395,6 +396,19 @@ h4,
 h5,
 h6 {
   font-family: "Asul", serif;
+  font-weight: 400;
+}
+
+.site-title {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 ul {
@@ -423,34 +437,6 @@ img {
   padding: 0 3rem;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding-top: 56px;
-  padding-bottom: 84px;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 2000;
-  padding: 0 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
 .visually-hidden {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
@@ -462,26 +448,18 @@ img {
   width: 1px;
 }
 
-.alert-danger {
-  color: #f04444;
-  text-align: center;
-  font-weight: 700;
-}
-
-.alert-success {
-  color: #50b861;
-  text-align: center;
-  font-weight: 700;
+main {
+  padding: 1.5rem;
 }
 
 body {
-  -webkit-box-shadow: 12px 0 17px -12px #DE9E48 inset;
-          box-shadow: 12px 0 17px -12px #DE9E48 inset;
+  -webkit-box-shadow: 12px 0 17px -12px #de9e48 inset;
+          box-shadow: 12px 0 17px -12px #de9e48 inset;
 }
 
 .site {
-  -webkit-box-shadow: -12px 0 17px -12px #DE9E48 inset;
-          box-shadow: -12px 0 17px -12px #DE9E48 inset;
+  -webkit-box-shadow: -12px 0 17px -12px #de9e48 inset;
+          box-shadow: -12px 0 17px -12px #de9e48 inset;
 }
 
 @media only screen and (min-width: 700px) {
@@ -492,6 +470,56 @@ body {
     background-repeat: no-repeat;
     background-position: 140% 100%;
     background-size: 50%;
+  }
+  body,
+  button,
+  input,
+  select,
+  optgroup,
+  textarea {
+    font-size: 1rem;
+  }
+  main {
+    padding: 10vh 3rem;
+  }
+  .site-title {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  h3 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .site {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  body,
+  button,
+  input,
+  select,
+  optgroup,
+  textarea {
+    font-size: 1rem;
+  }
+  main {
+    padding: 10vh 3rem;
+    padding-top: 8vh;
+    padding-bottom: 20vh;
+  }
+  .site-title {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  h3 {
+    font-size: 2rem;
   }
   .site {
     -webkit-box-shadow: none;
@@ -510,11 +538,19 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 2rem;
-  max-width: 1400px;
+  max-width: 1200px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
+  padding-bottom: 16vh;
+}
+
+@media screen and (min-width: 700px) {
+  .team {
+    gap: 0;
+    padding-bottom: 22vh;
+  }
 }
 
 .team__member-intro {
@@ -528,113 +564,111 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 2rem;
-  max-width: 1400px;
+  row-gap: 6rem;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+}
+
+@media screen and (min-width: 700px) {
+  .team__member-intro {
+    margin-top: 4rem;
+  }
 }
 
 .team__intro-area {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 27%;
-          flex: 0 0 27%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 700px) {
   .team__intro-area {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 45%;
-            flex: 0 0 45%;
+        -ms-flex: 0 0 calc(50% - 1.5rem);
+            flex: 0 0 calc(50% - 1.5rem);
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (min-width: 960px) {
   .team__intro-area {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-    padding-bottom: 6rem;
+        -ms-flex: 0 0 calc(33% - 2rem);
+            flex: 0 0 calc(33% - 2rem);
   }
 }
 
-.team__intro-area .team__full-name {
-  font-size: 1.8rem;
+.team__intro-area .team__full-name h3 {
+  margin-top: 0;
+  color: #de9e48;
+  font-family: "Asul", serif;
+  margin-bottom: 0;
   text-align: center;
 }
 
-@media screen and (max-width: 1300px) {
-  .team__intro-area .team__full-name {
-    font-size: 1.5rem;
-  }
-}
-
-.team__intro-area .team__full-name h2 {
-  color: #de9e48;
-  font-family: "Asul", serif;
-  font-weight: 100;
-  margin-bottom: 0;
-}
-
-@media screen and (max-width: 650px) {
-  .team__intro-area .team__full-name h2 {
-    margin-top: 0;
+@media screen and (min-width: 960px) {
+  .team__intro-area .team__full-name h3 {
+    font-size: 1.7rem;
   }
 }
 
 .team__intro-area .team__member-position {
-  font-size: 1.2rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .team__intro-area .team__member-description {
-  line-height: 1.7rem;
+  text-align: left;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (min-width: 700px) {
   .team__intro-area .team__member-description {
-    width: 80%;
-    margin: auto;
+    text-align: center;
   }
 }
 
 .team__intro-area .team__prof-image {
-  display: none;
+  display: block;
   text-align: center;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (min-width: 700px) {
   .team__intro-area .team__prof-image {
-    display: block;
+    display: none;
   }
 }
 
 .team__intro-area .team__prof-image img {
   border-radius: 50%;
-  width: 180px;
-  height: 180px;
+  width: 140px;
+  height: 140px;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 4px #de9e48 solid;
+  border: 2px #de9e48 solid;
 }
 
 .team__title {
-  font-weight: 100;
-  font-size: 3rem;
-  font-family: "Asul", serif;
   width: 100%;
-  grid-column: 1 / -1;
-  text-align: center;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (min-width: 700px) {
   .team__title {
-    width: 80%;
-    text-align: left;
+    text-align: center;
+    margin: .8rem;
   }
 }
 
-@media screen and (max-width: 650px) {
+.team__center-image {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
   .team__center-image {
-    display: none;
+    display: block;
+    width: 85%;
+    max-width: 900px;
+  }
+  .team__center-image figure {
+    margin: 0;
   }
 }
 
@@ -645,22 +679,59 @@ body {
       align-self: stretch;
 }
 
+.faq-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  gap: 1rem;
+  padding-bottom: 13vh;
+}
+
 .accordion {
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+}
+
+.accordion.animation:after {
+  top: 14px;
+  padding: 0 0 2px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.accordion:after {
+  content: '▼';
+  color: #de9e48;
+  font-size: 15px;
+  right: 1rem;
+  top: 13px;
+  padding: 0 0 2px;
+  position: absolute;
+  pointer-events: none;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .accordion .menu {
   background-color: rgba(0, 0, 0, 0.35);
   border: solid 1px #de9e48;
-  color: white;
-  font-size: 18px;
-  padding: 10px;
+  color: #fdf9df;
+  padding: .7rem 2.2rem .7rem .7rem;
+  font-size: 1rem;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  margin: 0;
+  border-radius: 4px;
 }
 
 .accordion .menu:hover,
@@ -670,34 +741,64 @@ body {
 }
 
 .accordion .contents {
-  line-height: 0;
   height: 0;
   overflow: hidden;
   opacity: 0;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  margin: 0;
 }
 
 .accordion .contents.is-open {
-  padding: 10px;
-  line-height: normal;
   height: auto;
   opacity: 1;
+  padding: 1rem .7rem;
 }
 
 @media only screen and (min-width: 700px) {
+  .faq-wrapper {
+    gap: 1rem;
+  }
+  .faq-wrapper > h2 {
+    text-align: center;
+    margin: .8rem;
+    margin-bottom: 0;
+  }
   .accordion {
     position: relative;
   }
+  .accordion.animation:after {
+    top: 16px;
+  }
   .accordion:after {
-    content: '▼';
-    color: #de9e48;
-    font-size: 20px;
+    font-size: 16px;
     right: 1rem;
-    top: 14px;
-    padding: 0 0 2px;
-    position: absolute;
-    pointer-events: none;
+    top: 13px;
+  }
+  .accordion .menu {
+    font-size: 1.1rem;
+    padding: .7rem;
+  }
+  .accordion .contents.is-open {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .faq-wrapper {
+    gap: 1.4rem;
+  }
+  .accordion.animation:after {
+    top: 15px;
+  }
+  .accordion:after {
+    font-size: 16px;
+    right: 1rem;
+    top: 13px;
+  }
+  .accordion .contents.is-open {
+    padding: 1rem;
+    line-height: 1.5;
   }
 }
 
@@ -827,11 +928,19 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   gap: 2rem;
-  max-width: 1400px;
+  max-width: 1200px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
+  padding-bottom: 16vh;
+}
+
+@media screen and (min-width: 700px) {
+  .team {
+    gap: 0;
+    padding-bottom: 22vh;
+  }
 }
 
 .team__member-intro {
@@ -845,132 +954,121 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 2rem;
-  max-width: 1400px;
+  row-gap: 6rem;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+}
+
+@media screen and (min-width: 700px) {
+  .team__member-intro {
+    margin-top: 4rem;
+  }
 }
 
 .team__intro-area {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 27%;
-          flex: 0 0 27%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 700px) {
   .team__intro-area {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 45%;
-            flex: 0 0 45%;
+        -ms-flex: 0 0 calc(50% - 1.5rem);
+            flex: 0 0 calc(50% - 1.5rem);
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (min-width: 960px) {
   .team__intro-area {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-    padding-bottom: 6rem;
+        -ms-flex: 0 0 calc(33% - 2rem);
+            flex: 0 0 calc(33% - 2rem);
   }
 }
 
-.team__intro-area .team__full-name {
-  font-size: 1.8rem;
+.team__intro-area .team__full-name h3 {
+  margin-top: 0;
+  color: #de9e48;
+  font-family: "Asul", serif;
+  margin-bottom: 0;
   text-align: center;
 }
 
-@media screen and (max-width: 1300px) {
-  .team__intro-area .team__full-name {
-    font-size: 1.5rem;
-  }
-}
-
-.team__intro-area .team__full-name h2 {
-  color: #de9e48;
-  font-family: "Asul", serif;
-  font-weight: 100;
-  margin-bottom: 0;
-}
-
-@media screen and (max-width: 650px) {
-  .team__intro-area .team__full-name h2 {
-    margin-top: 0;
+@media screen and (min-width: 960px) {
+  .team__intro-area .team__full-name h3 {
+    font-size: 1.7rem;
   }
 }
 
 .team__intro-area .team__member-position {
-  font-size: 1.2rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .team__intro-area .team__member-description {
-  line-height: 1.7rem;
+  text-align: left;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (min-width: 700px) {
   .team__intro-area .team__member-description {
-    width: 80%;
-    margin: auto;
+    text-align: center;
   }
 }
 
 .team__intro-area .team__prof-image {
-  display: none;
+  display: block;
   text-align: center;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (min-width: 700px) {
   .team__intro-area .team__prof-image {
-    display: block;
+    display: none;
   }
 }
 
 .team__intro-area .team__prof-image img {
   border-radius: 50%;
-  width: 180px;
-  height: 180px;
+  width: 140px;
+  height: 140px;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 4px #de9e48 solid;
+  border: 2px #de9e48 solid;
 }
 
 .team__title {
-  font-weight: 100;
-  font-size: 3rem;
-  font-family: "Asul", serif;
   width: 100%;
-  grid-column: 1 / -1;
-  text-align: center;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (min-width: 700px) {
   .team__title {
-    width: 80%;
-    text-align: left;
+    text-align: center;
+    margin: .8rem;
   }
 }
 
-@media screen and (max-width: 650px) {
+.team__center-image {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
   .team__center-image {
-    display: none;
+    display: block;
+    width: 85%;
+    max-width: 900px;
+  }
+  .team__center-image figure {
+    margin: 0;
   }
 }
 
 /* 3.2. Contact Page ================ */
-.page-contact .site-main .page {
-  padding: 0 1rem;
-  text-align: center;
-}
-
-.page-contact .site-main .page .entry-title {
-  display: none;
-}
-
 .page-contact .site-main .page .nf-before-form-content {
   display: none;
 }
 
 .page-contact .site-main .page .nf-form-content {
-  max-width: 800px;
+  max-width: 600px;
   padding: 0;
 }
 
@@ -996,18 +1094,38 @@ textarea {
 
 .page-contact .site-main .page .nf-field-label label {
   font-family: "Asul", serif;
-  font-size: 1.875rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 .page-contact .site-main .page .nf-form-title h3 {
-  margin: 10rem 0 3rem;
-  font-size: 2.5rem;
+  margin: 1.5rem 0;
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+
+.page-contact .site-main .page .submit-wrap div {
+  text-align: center;
+}
+
+.page-contact .site-main .page input[type="button"] {
   font-weight: 400;
 }
 
+@media screen and (min-width: 700px) {
+  .page-contact .site-main {
+    padding-bottom: 20vh;
+  }
+  .page-contact .site-main .page .nf-field-label label {
+    font-size: 1.1rem;
+  }
+  .page-contact .site-main .page .nf-form-title h3 {
+    font-size: 2.2rem;
+  }
+}
+
 /* 3.3  Home Page ================== */
-#primary {
+.front-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1021,38 +1139,27 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1.5rem;
+  gap: 2rem;
 }
 
-#primary h2 {
+.front-page h2 {
   font-weight: 400;
 }
 
 @media only screen and (min-width: 700px) {
-  #primary {
-    line-height: 1.5;
+  .front-page {
     -webkit-box-shadow: none;
             box-shadow: none;
-    background: url("./images/background-right.png") no-repeat 0% 34%;
+    background: url("./images/background-right.png") no-repeat 0% 30%;
     background-size: 30%;
-  }
-}
-
-@media only screen and (min-width: 960px) {
-  #primary {
-    line-height: 38px;
+    padding-top: 3rem;
   }
 }
 
 #primary .about-cheers-container article {
   display: -ms-grid;
   display: grid;
-  margin-bottom: 2rem;
   max-width: 1200px;
-}
-
-#primary .about-cheers-container article h2 {
-  font-size: 28px;
 }
 
 #primary .about-cheers-container article h2 span {
@@ -1078,6 +1185,7 @@ textarea {
   -webkit-box-shadow: 5px 5px 100px 0px rgba(222, 158, 72, 0.4);
           box-shadow: 5px 5px 100px 0px rgba(222, 158, 72, 0.4);
   display: block;
+  border: 1px solid #de9e48;
 }
 
 @media only screen and (min-width: 700px) {
@@ -1086,8 +1194,6 @@ textarea {
         grid-template-columns: 60% 40%;
     -ms-grid-column-align: center;
         justify-self: center;
-    padding: 2rem;
-    font-size: 18px;
     margin-bottom: 0;
   }
   #primary .about-cheers-container article .about-cheers-content {
@@ -1104,12 +1210,11 @@ textarea {
   }
   #primary .about-cheers-container article .about-cheers-content h2 {
     text-align: left;
-    font-size: 46px !important;
     margin-top: .5rem;
     margin-bottom: .5rem;
   }
   #primary .about-cheers-container article .about-featured-image img {
-    max-width: initial !important;
+    max-width: 260px !important;
     width: 20vw !important;
   }
 }
@@ -1122,16 +1227,12 @@ textarea {
 }
 
 .problem-solution-container {
-  margin-bottom: 5rem;
-}
-
-.problem-solution-container h2 {
-  font-size: 24px;
+  margin-bottom: 10vh;
 }
 
 @media only screen and (min-width: 700px) {
   .problem-solution-container {
-    height: 600px;
+    height: 500px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1142,7 +1243,7 @@ textarea {
     margin-bottom: 0;
   }
   .problem-solution-container article {
-    padding: 2rem;
+    padding: 2rem 0;
     max-width: 1200px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1158,28 +1259,23 @@ textarea {
         -ms-flex-align: center;
             align-items: center;
   }
-  .problem-solution-container article h2 {
-    font-size: 38px;
-  }
   .problem-solution-container article p {
     text-align: left;
     width: 560px;
-    font-size: 18px;
   }
 }
 
 @media only screen and (min-width: 960px) {
   .problem-solution-container {
-    margin-bottom: 5rem;
+    margin-bottom: 8vh;
   }
 }
 
 .how-to-use-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
   max-width: 1400px;
+  width: calc(100vw - 3rem);
 }
 
 .how-to-use-container article {
@@ -1197,8 +1293,7 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   font-family: "Asul", serif;
-  width: calc(100vw - 3rem);
-  padding-bottom: 4rem;
+  padding-bottom: 9vh;
 }
 
 .how-to-use-container article .order-number {
@@ -1215,12 +1310,12 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
 .how-to-use-container article p {
-  font-size: 18px;
+  font-size: 1.2rem;
   margin-top: .5rem;
 }
 
@@ -1230,6 +1325,7 @@ textarea {
   -webkit-box-shadow: 5px 5px 100px 0px rgba(222, 158, 72, 0.5);
           box-shadow: 5px 5px 100px 0px rgba(222, 158, 72, 0.5);
   display: block;
+  border: 1px solid #de9e48;
 }
 
 @media only screen and (min-width: 700px) {
@@ -1238,9 +1334,7 @@ textarea {
         grid-template-columns: 1fr 1fr 1fr;
     width: calc(100vw - 6rem);
   }
-  .how-to-use-container h2 {
-    font-size: 38px;
-    text-align: center;
+  .how-to-use-container h3 {
     grid-column: 1 / -1;
   }
   .how-to-use-container article {
@@ -1252,7 +1346,7 @@ textarea {
   .how-to-use-container article .order-number {
     width: 45px;
     height: 45px;
-    font-size: 20px;
+    font-size: 1.25rem;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -1262,6 +1356,7 @@ textarea {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    font-size: 1.1rem;
   }
   .how-to-use-container article img {
     -webkit-box-ordinal-group: 3;
@@ -1273,33 +1368,29 @@ textarea {
 }
 
 @media only screen and (min-width: 960px) {
-  .how-to-use-container {
-    width: 100%;
-  }
-  .how-to-use-container h2 {
+  .how-to-use-container h3 {
     padding-left: 1.5rem;
   }
   .how-to-use-container article .order-number {
-    width: 53px;
-    height: 53px;
-    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
   }
   .how-to-use-container article img {
-    max-width: initial !important;
-    width: 18vw !important;
+    max-width: 260px !important;
   }
   .how-to-use-container article p {
-    font-size: 24px;
+    font-size: 1.2rem;
   }
 }
 
 .testimonials {
   font-family: "Asul", serif;
+  padding-bottom: 5rem;
 }
 
-.testimonials h2 {
+.testimonials h3 {
   padding: 0 1rem;
-  font-size: 24px;
 }
 
 .testimonials .owl-item {
@@ -1333,7 +1424,6 @@ textarea {
   position: relative;
   width: 85%;
   margin: 0 auto;
-  font-size: 18px;
 }
 
 .owl-carousel .owl-item div p:not(:last-of-type)::before {
@@ -1371,25 +1461,25 @@ textarea {
 
 @media only screen and (min-width: 700px) {
   .testimonials {
-    padding-bottom: 4rem;
+    padding-bottom: 10rem;
   }
-  .testimonials h2 {
+  .testimonials h3 {
     text-align: center;
+    font-size: 2rem;
+  }
+  .testimonials p {
+    font-size: 1rem;
   }
 }
 
 @media only screen and (min-width: 960px) {
   .testimonials {
-    padding-top: 6rem;
-    padding-bottom: 10rem;
-  }
-  .testimonials h2 {
-    text-align: center;
-    font-size: 38px;
+    padding-top: 5vh;
+    padding-bottom: 12vh;
   }
   .owl-carousel .owl-item div img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
 }
 
@@ -1440,17 +1530,17 @@ header .site-branding .site-description {
   font-family: "Asul", serif;
 }
 
-header .site-branding .site-title {
-  font-size: 38px;
-}
-
 header .site-branding .site-title::first-letter {
   color: #de9e48 !important;
   text-transform: uppercase;
 }
 
+header .site-branding .site-title span {
+  color: #de9e48;
+}
+
 header .site-branding .site-description {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 header nav {
@@ -1500,7 +1590,11 @@ header nav .nav-menu li {
   border-radius: 5px;
   padding: .7rem;
   text-align: center;
-  font-size: 20px;
+  font-size: 1rem;
+}
+
+header nav .nav-menu li a {
+  display: block;
 }
 
 header #site-navigation .nav_toggle[aria-expanded='false'] {
@@ -1554,12 +1648,10 @@ header .desktop-download {
     -ms-grid-column-span: 3;
     grid-column: 1 / 4;
     grid-row: 1 / -1;
-  }
-  header .site-branding .site-title {
-    font-size: 50px;
+    padding: 2rem 0;
   }
   header .site-branding .site-description {
-    font-size: 30px;
+    font-size: 1.1rem;
   }
   header .site-branding .logo-download-icons .custom-logo {
     min-width: 80px;
@@ -1602,6 +1694,10 @@ header .desktop-download {
     -webkit-text-decoration: underline #de9e48;
             text-decoration: underline #de9e48;
   }
+  header #site-navigation .nav-menu .current-menu-item a {
+    -webkit-text-decoration: underline #de9e48;
+            text-decoration: underline #de9e48;
+  }
   header .desktop-download {
     -ms-grid-column: 4;
     -ms-grid-column-span: 1;
@@ -1636,11 +1732,69 @@ header .desktop-download {
 }
 
 /* 3.4  Footer =============== */
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer ul li {
+  margin: 0 1rem;
+  font-size: 1.1rem;
+  border: white solid 2px;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer ul li a {
+  display: block;
+}
+
+footer p {
+  margin: 0;
+  font-family: "Asul", serif;
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  padding: .5rem;
+  text-align: center;
+}
+
+footer span {
+  color: #de9e48;
+}
+
 @media only screen and (min-width: 700px) {
   footer {
     -webkit-box-shadow: 0 4px 20px 0 rgba(222, 158, 72, 0.7) inset;
             box-shadow: 0 4px 20px 0 rgba(222, 158, 72, 0.7) inset;
-    padding: 1.5rem 3rem;
+    padding: 1rem 3rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1667,7 +1821,8 @@ header .desktop-download {
     display: flex;
   }
   footer div ul li {
-    margin: 1rem;
+    margin: 0 .5rem;
+    font-size: .9rem;
   }
   footer p {
     -webkit-box-ordinal-group: 2;
@@ -1675,14 +1830,41 @@ header .desktop-download {
             order: 1;
     margin: 0;
     font-family: "Asul", serif;
-    font-size: 17px;
+    font-size: .9rem;
     letter-spacing: .16rem;
+    text-align: left;
   }
 }
 
 @media only screen and (min-width: 960px) {
   footer p {
-    font-size: 20px;
+    font-size: 1rem;
+  }
+}
+
+/* 3.5  404 page ============= */
+.error404 main {
+  min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (min-width: 700px) {
+  .error404 main {
+    min-height: 65vh;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .error404 main {
+    min-height: 75vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

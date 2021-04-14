@@ -1,11 +1,11 @@
 // applied to home/about/how to use/testimonials sections
 
-#primary {
+.front-page {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem;
+    gap: 2rem;
     
     h2 {
         font-weight: 400;
@@ -13,20 +13,17 @@
 }
 
 @media only screen and (min-width: $tablet-breakpoint) {
-    #primary {
-        line-height: 1.5;
+    .front-page {
         box-shadow: none;
-        background: url('./images/background-right.png') no-repeat 0% 34%;
+        background: url('./images/background-right.png') no-repeat 0% 30%;
         background-size: 30%;
+        padding-top: 3rem;
     }
 }
 
 
 @media only screen and (min-width: $pc-breakpoint) {
 
-    #primary {
-        line-height: 38px;
-    }
 }
 
 
