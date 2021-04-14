@@ -32,16 +32,19 @@ header {
     }
 
     .site-title {
-        font-size: 38px;
 
         &::first-letter {
             color: $accent-color !important;
             text-transform: uppercase;
         }
+
+        span {
+            color: $accent-color;
+        }
     }
 
     .site-description {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
 
@@ -77,8 +80,11 @@ header {
                 border-radius: 5px;
                 padding: .7rem;
                 text-align: center;
-                //fix later
-                font-size: 20px;
+                font-size: $font-mobile-p;
+
+                a {
+                    display: block;
+                }
             }
         }
     }
@@ -135,13 +141,11 @@ header {
         .site-branding {
             grid-column: 1 / 4;
             grid-row: 1 / -1;
+            padding: 2rem 0;
 
-            .site-title {
-                font-size: 50px;
-            }
 
             .site-description {
-                font-size: 30px;
+                font-size: 1.1rem;
             }
             .logo-download-icons {
                 .custom-logo {
@@ -184,6 +188,9 @@ header {
                     a:hover {
                         text-decoration: underline $accent-color;
                     }
+                }
+                .current-menu-item a{
+                    text-decoration: underline $accent-color;
                 }
 
             }

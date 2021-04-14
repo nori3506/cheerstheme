@@ -17,25 +17,17 @@
 		<div class="site-branding">
 			<div class="logo-download-icons">
 				<?php the_custom_logo(); ?>
-				<?php 
-				if ( is_front_page() && is_home() ) :
-					?>
-					<a href="#"><img src="./wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>
-					<?php
-				else :
-					?>
-					<a href="#"><img src="../wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>
-				<?php endif; ?>		
+					<a href="https://cheers-wmdd.netlify.app/"><img src="/cheerswp/wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>	
 			</div>	
 
 			<?php 
 			if ( is_front_page() && is_home() ) :
 				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Cheers<span>!</span></a></h1>
 				<?php
 			else :
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Cheers<span>!</span></a></p>
 				<?php
 			endif;
 			$cheerstheme_description = get_bloginfo( 'description', 'display' );
@@ -61,16 +53,8 @@
 			?>
 		</nav><!-- #site-navigation -->
 
-		<!-- only for desktop layout -->
+		<!-- download-button only for desktop layout -->
 		<div class="desktop-download">
-			<?php
-				if ( is_front_page() && is_home() ) :
-					?>
-					<a href="#"><img src="./wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>
-					<?php
-				else :
-					?>
-					<a href="#"><img src="../wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>
-			<?php endif; ?>
+					<a href="https://cheers-wmdd.netlify.app/"><img src="/cheerswp/wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>
 		</div>
 	</header><!-- #masthead -->

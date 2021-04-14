@@ -4,13 +4,9 @@
 
     .about-cheers-container article{
         display: grid;
-        margin-bottom: 2rem;
-        max-width: $x-large-max-width;
+        max-width: $max-width;
 
-        h2 {
-            //fix later
-            font-size: 28px;
-            
+        h2 {           
             span {
                 color: $accent-color;
             }
@@ -25,10 +21,10 @@
             img {
                 max-width: initial;
                 width: 50vw;
-                box-shadow: 5px 5px 100px 0px rgba($color: #DE9E48
+                box-shadow: 5px 5px 100px 0px rgba($color: $accent-color
                 , $alpha: 0.4);
                 display: block;
-                
+                border: 1px solid $accent-color;
             }
         }
     }
@@ -37,27 +33,20 @@
 
 }
 
-// font size 18px however, it's 1rem
 @media only screen and (min-width: $tablet-breakpoint) {
     #primary {
         .about-cheers-container article{
             grid-template-columns: 60% 40%;
             justify-self: center;
-            padding: 2rem;
-            //fix later
-            font-size: 18px;
             margin-bottom: 0;
     
             .about-cheers-content {
                display: flex;
                flex-flow: column nowrap;
-               justify-content: center;
-    
+               justify-content: center;    
             
                h2 {
-                   text-align: left;
-                   // fix later
-                   font-size: 46px !important;  
+                   text-align: left;  
                    margin-top: .5rem;
                    margin-bottom: .5rem;
                }
@@ -66,7 +55,7 @@
     
             .about-featured-image {
                 img {
-                    max-width: initial !important;
+                    max-width: 260px !important;
                     width: 20vw !important;             
                 }
             }

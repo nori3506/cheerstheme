@@ -1,17 +1,10 @@
 .page-contact .site-main .page {
-  padding: 0 1rem;
-  text-align: center;
-
-  .entry-title {
-    display: none;
-  }
-
   .nf-before-form-content {
     display: none;
   }
 
   .nf-form-content {
-    max-width: 800px;
+    max-width: 600px;
     padding: 0;
   }
 
@@ -37,13 +30,42 @@
 
   .nf-field-label label {
     font-family: $font__heading;
-    font-size: 1.875rem;
+    font-size: $font-mobile-p;
     font-weight: 400;
   }
 
   .nf-form-title h3 {
-    margin: 10rem 0 3rem;
-    font-size: 2.5rem;
+    margin: 1.5rem 0;
+    font-weight: 400;
+    font-size: $font-mobile-h2;
+  }
+
+  .submit-wrap div {
+    // button alignment
+    text-align: center;
+  }
+
+  input[type="button"] {
     font-weight: 400;
   }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .page-contact .site-main {
+    padding-bottom: 20vh;
+
+    .page {
+      .nf-field-label label {
+        font-size: 1.1rem;
+      }
+
+      .nf-form-title h3 {
+        font-size: $font-tablet-h2;
+      }
+
+    }
+  }
+
+
+
 }

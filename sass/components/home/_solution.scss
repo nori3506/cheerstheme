@@ -1,39 +1,28 @@
-
 .problem-solution-container {
-    margin-bottom: 5rem;
-
-    h2 {
-        font-size: 24px;
-    }
+    margin-bottom: 10vh;
 }
 
 
 @media only screen and (min-width: $tablet-breakpoint) {
 
     .problem-solution-container {
-        height: 600px;
+        height: 500px;
         display: flex;
         text-align: center;
         justify-content: center;
         margin-bottom: 0;
 
         article {
-            padding: 2rem;
-            max-width: $x-large-max-width;
+            padding: 2rem 0;
+            max-width: $max-width;
             display: flex;
             flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
 
-            h2 {
-                //fix later
-                font-size: 38px;
-            }
-
             p {
                 text-align: left;
                 width: 560px;
-                font-size: 18px;
             }
         }
     }
@@ -41,6 +30,6 @@
 
 @media only screen and (min-width: $pc-breakpoint) {
     .problem-solution-container {
-        margin-bottom: 5rem;
+        margin-bottom: 8vh;
     }
 }

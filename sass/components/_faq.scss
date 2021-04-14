@@ -3,36 +3,70 @@
     align-self: stretch;
 }
 
+.faq-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    padding-bottom: 13vh;
 
+
+}
 .accordion{
     max-width: 800px;
     margin: 0 auto;
+    position: relative; 
+
+    // arrow opened
+    &.animation {
+        &:after {
+            top: 14px;
+            padding: 0 0 2px;
+            transform: rotate(0deg);
+        }  
+    }
+
+    // arrow closed (default)
+    &:after {
+        content: '▼';
+        color: $accent-color;
+        font-size: 15px;
+        right: 1rem;
+        top: 13px;
+        padding: 0 0 2px;
+        position: absolute;
+        pointer-events: none;
+        transform: rotate(-90deg);
+        transition: all .2s;
+    }  
         .menu {
             background-color: rgba(0, 0, 0, 0.35);
             border:solid 1px $accent-color;
-            color: white;
-            font-size: 18px;
-            padding: 10px;
+            color: $bg-light-color;
+            padding: .7rem 2.2rem .7rem .7rem;
+            // this is not "p"
+            font-size: $font-mobile-p;
             cursor: pointer;
             user-select: none;
+            margin: 0;
+            border-radius: 4px;
         }
         .menu:hover,
         .menu:active,
         .menu.is-active {
             background-color: rgba(0, 0, 0, 0.95);
+
         }
         .contents {
-            line-height: 0;
             height: 0;
             overflow: hidden;
             opacity: 0;
-            transition-duration: 0.2s;
+            transition-duration: 0.3s;
+            margin: 0;
         }
         .contents.is-open {
-            padding: 10px;
-            line-height: normal;
             height: auto;
             opacity: 1;
+            padding: 1rem .7rem;
         }
 
   }
@@ -41,17 +75,64 @@
 
 @media only screen and (min-width: $tablet-breakpoint) {
 
+    .faq-wrapper {
+        gap: 1rem;
+
+        > h2 {
+            text-align: center;
+            margin: .8rem;
+            margin-bottom: 0;
+        }
+    }
     .accordion {
         position: relative;
+
+        // arrow opened
+        &.animation {
+            &:after {
+                top: 16px;
+            }  
+        }
+
+        // arrow closed (default)
         &:after {
-          content: '▼';
-          color: $accent-color;
-          font-size: 20px;
+          font-size: 16px;
           right: 1rem;
-          top: 14px;
-          padding: 0 0 2px;
-          position: absolute;
-          pointer-events: none;
+          top: 13px;
+        }
+
+        .menu {
+            font-size: 1.1rem;
+            padding: .7rem;
+        }
+
+        .contents.is-open {
+            padding: 1rem 1.5rem;
+        }
+    }
+}
+
+@media only screen and (min-width: $pc-breakpoint) {
+
+    .faq-wrapper {
+        gap: 1.4rem;
+    }
+    .accordion {
+
+        &.animation {
+            &:after {
+                top: 15px;
+            }  
+        }
+        &:after {
+          font-size: 16px;
+          right: 1rem;
+          top: 13px;
+        }
+
+        .contents.is-open {
+            padding: 1rem;
+            line-height: 1.5;
         }
     }
 }

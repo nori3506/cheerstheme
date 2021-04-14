@@ -5,7 +5,7 @@
   </div>
 
   <div class="team__full-name">
-    <h2><?php the_field('name'); ?></h2>
+    <h3><?php the_field('name'); ?></h3>
   </div>
 
   <div class="team__member-position">

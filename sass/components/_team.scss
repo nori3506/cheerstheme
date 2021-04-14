@@ -2,100 +2,99 @@
   flex-flow: row wrap;
   display: flex;
   gap: 2rem;
-  max-width: 1400px;
+  max-width: $max-width;
   justify-content: center;
   margin: auto;
+  padding-bottom: 16vh;
+
+  @media screen and (min-width:$tablet-breakpoint) {
+    gap: 0;
+    padding-bottom: 22vh;
+  }
 
   &__member-intro {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 2rem;
-    max-width: 1400px;
+    row-gap: 6rem;
+    column-gap: 3rem;
+    @media screen and (min-width:$tablet-breakpoint) {
+      margin-top: 4rem;
+    }
   }
 
   &__intro-area {
-    flex: 0 0 27%;
+    flex: 0 0 100%;
 
-    @media screen and (max-width:1100px) {
-      flex: 0 0 45%;
+    @media screen and (min-width:$tablet-breakpoint) {
+      flex: 0 0 calc(50% - 1.5rem);
     }
 
-    @media screen and (max-width: 650px) {
-      flex: 0 0 100%;
-      padding-bottom: 6rem;
+    @media screen and (min-width:$pc-breakpoint) {
+      flex: 0 0 calc(33% - 2rem);
     }
 
     .team__full-name {
-      font-size: 1.8rem;
-      text-align: center;
-
-      @media screen and (max-width:1300px) {
-        font-size: 1.5rem;
-      }
-
-      h2 {
+      h3 {
+        margin-top: 0;
         color: $accent-color;
         font-family: $font__heading;
-        font-weight: 100;
         margin-bottom: 0;
-
-        @media screen and (max-width: 650px) {
-          margin-top: 0;
+        text-align: center;
+        @media screen and (min-width:$pc-breakpoint) {
+          font-size: 1.7rem;
         }
       }
     }
 
     .team__member-position {
-      font-size: 1.2rem;
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1.25rem;
     }
 
     .team__member-description {
-      line-height: 1.7rem;
+      text-align: left;
 
-      @media screen and (max-width: 650px) {
-        width: 80%;
-        margin: auto;
+      @media screen and (min-width: $tablet-breakpoint) {
+        text-align: center;
       }
     }
 
     .team__prof-image {
-      display: none;
+      display: block;
       text-align: center;
 
-      @media screen and (max-width: 650px) {
-        display: block;
+      @media screen and (min-width: $tablet-breakpoint) {
+        display: none;
       }
 
       img {
         border-radius: 50%;
-        width: 180px;
-        height: 180px;
+        width: 140px;
+        height: 140px;
         object-fit: cover;
-        border: 4px #de9e48 solid;
+        border: 2px $accent-color solid;
       }
-    }
-  }
+    } // team prof image
+  } // intro area
 
   &__title {
-    font-weight: 100;
-    font-size: 3rem;
-    font-family: $font__heading;
     width: 100%;
-    grid-column: 1 / -1;
-    text-align: center;
-
-    @media screen and (max-width: 650px) {
-      width: 80%;
-      text-align: left;
+    @media screen and (min-width: $tablet-breakpoint) {
+      text-align: center;
+      margin: .8rem;
     }
   }
 
-  @media screen and (max-width: 650px) {
-    &__center-image {
-      display: none;
+  &__center-image {
+    display: none; 
+    @media screen and (min-width: $tablet-breakpoint) {
+      display: block;
+      width: 85%;
+      max-width: 900px;
+      figure {
+        margin: 0;
+      }
     }
   }
 }
