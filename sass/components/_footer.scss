@@ -5,6 +5,7 @@ footer {
     align-items: center;
     padding: 1rem;
 
+    // social icons
     ul {
         display: flex;
         li {
@@ -23,7 +24,7 @@ footer {
 
         }
     }
-
+    // copyright
     p {
         margin: 0;
         font-family: $font__heading;
@@ -48,19 +49,21 @@ footer {
         flex-flow: row nowrap;
         align-items: center;
         justify-content: space-between;
-    
+
+        // social icons
         div {
             order: 2;
             ul {
                 margin: 0;
-                display: flex; 
+                display: flex;
                 li {
                     margin: 0 .5rem;
                     font-size: .9rem;
                 }
             }
         }
-    
+
+        // copyright
         p {
             order: 1;
             margin: 0;
