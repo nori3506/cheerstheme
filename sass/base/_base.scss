@@ -1,3 +1,4 @@
+// General
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 * {
@@ -89,6 +90,7 @@ body {
   box-shadow: -12px 0 17px -12px $accent-color inset;
 }
 
+// General media query
 @media only screen and (min-width: $tablet-breakpoint) {
   body {
     box-shadow: none;
@@ -123,7 +125,7 @@ body {
     font-size: $font-tablet-h3;
     text-align: center;
   }
-  
+
   .site {
     box-shadow: none;
   }
@@ -144,7 +146,7 @@ body {
     padding-top: 8vh;
     padding-bottom: 20vh;
   }
-  
+
   .site-title {
     font-size: $font-desktop-h1;
   }
@@ -156,7 +158,7 @@ body {
   h3 {
     font-size: $font-desktop-h3;
   }
-  
+
   .site {
     box-shadow: none;
   }

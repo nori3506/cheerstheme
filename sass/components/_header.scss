@@ -23,7 +23,7 @@ header {
         }
     }
 
-    .site-title, 
+    .site-title,
     .site-description {
         text-align: center;
         margin: 0;
@@ -89,29 +89,30 @@ header {
         }
     }
 
+    // toggle nav menu
     #site-navigation .nav_toggle[aria-expanded='false'] {
-        background: url('./images/nav-icon.svg') no-repeat center center; 
+        background: url('./images/nav-icon.svg') no-repeat center center;
         width: 50px;
         height: 50px;
         background-color: transparent;
         border: none;
         border-radius: 0;
         color: transparent;
-        
+
         &:focus {
             outline: none;
         }
     }
 
     #site-navigation .nav_toggle[aria-expanded='true'] {
-        background: url('./images/nav-close.svg') no-repeat center center; 
+        background: url('./images/nav-close.svg') no-repeat center center;
         width: 30px;
         height: 30px;
         background-color: transparent;
         border: none;
         border-radius: 0;
         color: transparent;
-        
+
         &:focus {
             outline: none;
         }
