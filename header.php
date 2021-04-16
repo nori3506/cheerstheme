@@ -5,6 +5,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 	<?php wp_head(); ?>
 </head>
@@ -17,7 +18,7 @@
 		<div class="site-branding">
 			<div class="logo-download-icons">
 				<?php the_custom_logo(); ?>
-					<a href="https://cheers-wmdd.netlify.app/"><img src="/cheerswp/wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>	
+					<a href="https://cheers-wmdd.netlify.app/"><img src="http://3.98.16.213/wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>	
 			</div>	
 
 			<div class="site-title-cp">
@@ -57,6 +58,6 @@
 
 		<!-- download-button only for desktop layout -->
 		<div class="desktop-download">
-					<a href="https://cheers-wmdd.netlify.app/"><img src="/cheerswp/wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>
+					<a href="https://cheers-wmdd.netlify.app/"><img src="http://3.98.16.213/wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>
 		</div>
 	</header><!-- #masthead -->

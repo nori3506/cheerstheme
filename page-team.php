@@ -9,6 +9,8 @@
 
 	<main id="team" class="team">
     <h2 class="team__title">Our Team</h2>
+    
+    <!-- Team Image Display -->
     <div class="team__center-image">
       <?php
         $page_id = 28;
@@ -16,6 +18,8 @@
         echo apply_filters('the_content', $post->post_content);
       ?>
     </div>
+
+    <!-- Team Member Introduction -->
     <div class="team__member-intro">
       <?php
         $args = array(
