@@ -4,7 +4,7 @@
 
     .about-cheers-container article{
         display: grid;
-        max-width: $max-width;
+        max-width: 915px;
 
         h2 {           
             span {
@@ -55,7 +55,7 @@
     
             .about-featured-image {
                 img {
-                    max-width: 260px !important;
+                    max-width: 210px !important;
                     width: 20vw !important;             
                 }
             }
@@ -68,7 +68,7 @@
 
     #primary {
         .about-cheers-container article {
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 60% 40%;
         }
     }
 

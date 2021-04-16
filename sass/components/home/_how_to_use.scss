@@ -75,6 +75,8 @@
                 order: 2;
                 max-width: initial !important;
                 width: 18vw !important; 
+                box-shadow: 5px 5px 60px 0px rgba($color: $accent-color
+            , $alpha: 0.4);
             }
         }        
     }
@@ -83,9 +85,6 @@
 @media only screen and (min-width: $pc-breakpoint) {
     .how-to-use-container {
 
-        h3 {
-            padding-left: 1.5rem;
-        }
 
         article {
                 .order-number {

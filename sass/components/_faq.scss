@@ -4,9 +4,8 @@
 }
 
 .faq-wrapper {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 1rem;
+    display: grid;
+    grid-gap: 1rem;
     padding-bottom: 13vh;
 
 
@@ -76,7 +75,6 @@
 @media only screen and (min-width: $tablet-breakpoint) {
 
     .faq-wrapper {
-        gap: 1rem;
 
         > h2 {
             text-align: center;

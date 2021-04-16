@@ -24,23 +24,24 @@
 
 .owl-carousel .owl-item div{
 
+
     p:not(:last-of-type) {
         background-color:#3F3230;
         box-shadow: 0 -4px 20px rgba($color: $accent-color, $alpha: 0.7) inset;
         border-radius: 5px;
-        height: 230px;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
         width: 85%;
         margin: 0 auto;
+        padding: 2rem 2rem 3rem 2rem;
 
         &::before {
             content: '“';
             position: absolute;
-            top: 40px;
-            left:40px;
+            top: 15px;
+            left:15px;
             font-size: 2rem;
             color: $accent-color;
         }
@@ -48,8 +49,8 @@
         &::after {
             content: '”';
             position: absolute;
-            bottom: 30px;
-            right:30px;
+            bottom: 20px;
+            right:15px;
             font-size: 2rem;
             color: $accent-color;
         }
@@ -86,8 +87,15 @@
 
     }
 
-}
+    .owl-carousel .owl-item div{
 
+        p:not(:last-of-type) {
+            padding: 3rem 3rem 4rem 3rem;
+        }
+    
+    }
+
+}
 @media only screen and (min-width: $pc-breakpoint) {
 
     .testimonials {

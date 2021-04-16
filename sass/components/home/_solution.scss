@@ -6,11 +6,15 @@
 @media only screen and (min-width: $tablet-breakpoint) {
 
     .problem-solution-container {
-        height: 500px;
+        height: 400px;
         display: flex;
         text-align: center;
         justify-content: center;
         margin-bottom: 0;
+
+        h3 {
+            margin: .5rem 0;
+        }
 
         article {
             padding: 2rem 0;
@@ -22,7 +26,7 @@
 
             p {
                 text-align: left;
-                width: 560px;
+                width: 665px;
             }
         }
     }
