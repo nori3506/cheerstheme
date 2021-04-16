@@ -21,6 +21,7 @@
 					<a href="https://cheers-wmdd.netlify.app/"><img src="http://3.98.16.213/wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>	
 			</div>	
 
+			<div class="site-title-cp">
 			<?php 
 			if ( is_front_page() && is_home() ) :
 				?>
@@ -36,6 +37,7 @@
 				?>
 				<p class="site-description"><?php echo $cheerstheme_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
+			</div><!-- .site-title-cp -->
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
