@@ -18,7 +18,7 @@
 		<div class="site-branding">
 			<div class="logo-download-icons">
 				<?php the_custom_logo(); ?>
-					<a href="https://cheers-wmdd.netlify.app/"><img src="wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>	
+					<a href="https://cheers-wmdd.netlify.app/"><img src="http://3.98.16.213/wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>	
 			</div>	
 
 			<?php 
@@ -56,6 +56,6 @@
 
 		<!-- download-button only for desktop layout -->
 		<div class="desktop-download">
-					<a href="https://cheers-wmdd.netlify.app/"><img src="wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>
+					<a href="https://cheers-wmdd.netlify.app/"><img src="http://3.98.16.213/wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>
 		</div>
 	</header><!-- #masthead -->
