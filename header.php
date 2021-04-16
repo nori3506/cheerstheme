@@ -18,7 +18,7 @@
 		<div class="site-branding">
 			<div class="logo-download-icons">
 				<?php the_custom_logo(); ?>
-					<a href="https://cheers-wmdd.netlify.app/"><img src="/cheerswp/wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>	
+					<a href="https://cheers-wmdd.netlify.app/"><img src="/wordpress/wp-content/themes/cheerstheme/images/download-cheers.svg" alt="download" class="download-img"></a>	
 			</div>	
 
 			<?php 
