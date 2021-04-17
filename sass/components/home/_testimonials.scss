@@ -24,7 +24,6 @@
 
 .owl-carousel .owl-item div{
 
-
     p:not(:last-of-type) {
         background-color:#3F3230;
         box-shadow: 0 -4px 20px rgba($color: $accent-color, $alpha: 0.7) inset;
@@ -36,6 +35,7 @@
         width: 85%;
         margin: 0 auto;
         padding: 2rem 2rem 3rem 2rem;
+        min-height: 250px !important;
 
         &::before {
             content: '“';
@@ -90,7 +90,7 @@
     .owl-carousel .owl-item div{
 
         p:not(:last-of-type) {
-            padding: 3rem 3rem 4rem 3rem;
+            padding: 2.5rem 2.5rem 4rem 2.5rem;
         }
     
     }
