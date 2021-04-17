@@ -30,14 +30,14 @@
             font-size: 1.2rem;
             margin-top: .5rem;
         }
-
+            // app image
         img {
             max-width: initial;
             width: 50vw;
             box-shadow: 5px 5px 100px 0px rgba($color: $accent-color
             , $alpha: 0.5);
-            display: block;  
-            border: 1px solid $accent-color;         
+            display: block;
+            border: 1px solid $accent-color;
         }
     }
 }
@@ -70,15 +70,16 @@
                 // special font size
                 font-size: 1.1rem;
             }
-
+                // app image
             img {
                 order: 2;
                 max-width: initial !important;
                 width: 18vw !important; 
                 box-shadow: 5px 5px 60px 0px rgba($color: $accent-color
             , $alpha: 0.4);
+
             }
-        }        
+        }
     }
 }
 
@@ -93,14 +94,14 @@
                     // special font size
                     font-size: 1.2rem;
                 }
-
+                    // app image
                 img {
-                    max-width: 260px !important;         
+                    max-width: 260px !important;
                 }
 
                 p {
                     font-size: 1.2rem;
                 }
-        }     
+        }
     }
 }

@@ -13,7 +13,7 @@
 .accordion{
     max-width: 800px;
     margin: 0 auto;
-    position: relative; 
+    position: relative;
 
     // arrow opened
     &.animation {
@@ -21,7 +21,7 @@
             top: 14px;
             padding: 0 0 2px;
             transform: rotate(0deg);
-        }  
+        }
     }
 
     // arrow closed (default)
@@ -36,7 +36,7 @@
         pointer-events: none;
         transform: rotate(-90deg);
         transition: all .2s;
-    }  
+    }
         .menu {
             background-color: rgba(0, 0, 0, 0.35);
             border:solid 1px $accent-color;
@@ -89,7 +89,7 @@
         &.animation {
             &:after {
                 top: 16px;
-            }  
+            }
         }
 
         // arrow closed (default)
@@ -116,12 +116,13 @@
         gap: 1.4rem;
     }
     .accordion {
-
+        // arrow opened
         &.animation {
             &:after {
                 top: 15px;
-            }  
+            }
         }
+        // arrow closed (default)
         &:after {
           font-size: 16px;
           right: 1rem;
